@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     try { initTabs(); } catch(e) { console.error('initTabs error:', e); }
     try { initStationFilters(); } catch(e) { console.error('initStationFilters error:', e); }
+    try { initRouteToggle(); } catch(e) { console.error('initRouteToggle error:', e); }
     try { initThemeToggle(); } catch(e) { console.error('initThemeToggle error:', e); }
     try { initChecklistStorage(); } catch(e) { console.error('initChecklistStorage error:', e); }
     try { initSimulationControls(); } catch(e) { console.error('initSimulationControls error:', e); }
@@ -62,6 +63,44 @@ function initStationFilters() {
             });
         });
     });
+}
+
+/**
+ * Going / Return Route Toggle Logic
+ */
+function initRouteToggle() {
+    const btnGoing = document.getElementById('btnRouteGoing');
+    const btnReturn = document.getElementById('btnRouteReturn');
+    const secGoing = document.getElementById('route-going-section');
+    const secReturn = document.getElementById('route-return-section');
+
+    if (btnGoing && btnReturn) {
+        btnGoing.addEventListener('click', () => {
+            btnGoing.classList.add('btn-primary');
+            btnGoing.style.background = 'var(--accent-emerald)';
+            btnGoing.style.color = '#fff';
+
+            btnReturn.classList.remove('btn-primary');
+            btnReturn.style.background = 'transparent';
+            btnReturn.style.color = 'var(--text-main, var(--text-color))';
+
+            secGoing.style.display = 'block';
+            secReturn.style.display = 'none';
+        });
+
+        btnReturn.addEventListener('click', () => {
+            btnReturn.classList.add('btn-primary');
+            btnReturn.style.background = 'var(--accent-emerald)';
+            btnReturn.style.color = '#fff';
+
+            btnGoing.classList.remove('btn-primary');
+            btnGoing.style.background = 'transparent';
+            btnGoing.style.color = 'var(--text-main, var(--text-color))';
+
+            secReturn.style.display = 'block';
+            secGoing.style.display = 'none';
+        });
+    }
 }
 
 /**
