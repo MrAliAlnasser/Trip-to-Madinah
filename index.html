@@ -1,575 +1,937 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>دليل رحلة من الأحساء إلى المدينة المنوّرة</title>
+
     <meta name="description" content="دليل تفصيلي وتفاعلي لرحلة من الأحساء إلى المدينة المنوّرة.">
 
+
+
     <!-- Open Graph / Facebook / WhatsApp -->
+
     <meta property="og:type" content="website">
+
     <meta property="og:url" content="https://mralialnasser.github.io/Trip-to-Madinah/">
+
     <meta property="og:title" content="دليل رحلة من الأحساء إلى المدينة المنوّرة">
+
     <meta property="og:description" content="دليل تفصيلي وتفاعلي لرحلة من الأحساء إلى المدينة المنوّرة.">
+
     <meta property="og:image" content="https://mralialnasser.github.io/Trip-to-Madinah/assets/og-image.png">
+
     <meta property="og:image:width" content="1200">
+
     <meta property="og:image:height" content="630">
+
     <meta property="og:image:type" content="image/png">
 
+
+
     <!-- Twitter -->
+
     <meta name="twitter:card" content="summary_large_image">
+
     <meta name="twitter:url" content="https://mralialnasser.github.io/Trip-to-Madinah/">
+
     <meta name="twitter:title" content="دليل رحلة من الأحساء إلى المدينة المنوّرة">
+
     <meta name="twitter:description" content="دليل تفصيلي وتفاعلي لرحلة من الأحساء إلى المدينة المنوّرة.">
+
     <meta name="twitter:image" content="https://mralialnasser.github.io/Trip-to-Madinah/assets/og-image.png">
 
+
+
     <!-- Favicon -->
+
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
     <link rel="alternate icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕌</text></svg>">
+
     <!-- Google Fonts: Cairo & Tajawal -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+
     <!-- FontAwesome Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Leaflet.js Interactive Map CSS & JS -->
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <link rel="stylesheet" href="styles.css">
+
     <style>
         .medina-card-img {
+
             width: 100%;
+
             height: 200px;
+
             object-fit: cover;
+
             border-radius: var(--radius-md);
+
             margin-bottom: 15px;
+
             margin-top: 10px;
+
             box-shadow: var(--shadow-sm);
+
         }
     </style>
+
 </head>
 
+
+
 <body class="theme-dark">
+
     <!-- Background Animated Shapes -->
+
     <div class="bg-shape shape-1"></div>
+
     <div class="bg-shape shape-2"></div>
+
     <div class="bg-shape shape-3"></div>
 
+
+
     <!-- Header Navigation -->
+
     <header class="app-header">
+
         <div class="container header-container">
+
             <div class="logo">
+
                 <i class="fa-solid fa-route logo-icon"></i>
+
                 <div class="logo-text">
+
                     <h1>دليل الرحلة</h1>
+
                     <span>من الأحساء إلى المدينة المنوّرة</span>
+
                 </div>
+
             </div>
+
             <div class="header-actions">
+
                 <button id="themeToggle" class="btn-icon" title="تبديل المظهر">
+
                     <i class="fa-solid fa-sun"></i>
+
                 </button>
+
                 <button id="printBtn" class="btn btn-secondary" onclick="window.print()">
+
                     <i class="fa-solid fa-print"></i> طباعة الخطة
+
                 </button>
+
             </div>
+
         </div>
+
     </header>
 
+
+
     <!-- Hero Section -->
+
     <section class="hero-section">
+
         <div class="container">
+
             <div class="hero-card">
+
                 <div class="hero-badge">
+
                     <i class="fa-solid fa-users"></i> رحلة عائلية مخصصة (بالغين + طفلة 10 سنوات)
+
                 </div>
-                <h2 class="hero-title">محاكاة مسار الرحلة البرية: من حي وسط المبرّز التاريخي إلى المدينة المنورة</h2>
+
+                <h2 class="hero-title">محاكاة مسار الرحلة البرية: من حي وسط المبرّز التاريخي إلى جامع سيّد الشهداء
+                    بالمدينة المنورة</h2>
+
                 <p class="hero-subtitle">
+
                     خطة ومحاكاة تفاعلية شاملة تنطلق من قلب <strong>حي وسط المبرّز التاريخي بالأحساء</strong>، مروراً
+
                     بالرياض والقصيم (بريدة)، وصولاً إلى <strong>المسجد النبوي الشريف بالمدينة المنورة</strong>.
+
                 </p>
+
+
 
                 <!-- Compact Hero Metric Summary Bar -->
+
                 <div class="hero-summary-bar">
+
                     <div class="hero-summary-grid">
+
                         <div class="hero-metric-pill">
+
                             <div class="pill-icon"
                                 style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+
                                 <i class="fa-solid fa-location-dot"></i>
+
                             </div>
+
                             <div class="pill-text">
+
                                 <span class="pill-value">حي المبرّز التاريخي</span>
+
                                 <span class="pill-label">الانطلاق من الأحساء</span>
+
                             </div>
+
                         </div>
+
                         <div class="hero-metric-pill">
+
                             <div class="pill-icon"
                                 style="background: rgba(59, 130, 246, 0.15); color: var(--primary-color);">
+
                                 <i class="fa-solid fa-road"></i>
+
                             </div>
+
                             <div class="pill-text">
+
                                 <span class="pill-value">1,150 كم</span>
+
                                 <span class="pill-label">إجمالي المسافة</span>
+
                             </div>
+
                         </div>
+
                         <div class="hero-metric-pill">
+
                             <div class="pill-icon"
                                 style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold);">
+
                                 <i class="fa-solid fa-clock"></i>
+
                             </div>
+
                             <div class="pill-text">
+
                                 <span class="pill-value" id="heroDriveTime">11 ساعة</span>
+
                                 <span class="pill-label">قيادة فعلية صافية</span>
+
                             </div>
+
                         </div>
+
                         <div class="hero-metric-pill pill-highlight">
+
                             <div class="pill-icon"
                                 style="background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald);">
+
                                 <i class="fa-solid fa-hourglass-half"></i>
+
                             </div>
+
                             <div class="pill-text">
+
                                 <span class="pill-value text-accent" id="heroTotalTripTime">16 ساعة و 15 دقيقة</span>
+
                                 <span class="pill-label">وقت الرحلة المتوقع</span>
+
                             </div>
+
                         </div>
+
                         <div class="hero-metric-pill">
+
                             <div class="pill-icon"
                                 style="background: rgba(244, 63, 94, 0.15); color: var(--accent-rose);">
+
                                 <i class="fa-solid fa-gas-pump"></i>
+
                             </div>
+
                             <div class="pill-text">
-                                <span class="pill-value">9 محطات</span>
+
+                                <span class="pill-value">5 محطات رئيسية</span>
+
                                 <span class="pill-label">أفضل التوقفات</span>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
+
+
     <!-- Main Content Navigation Tabs -->
+
     <nav class="main-tabs-nav">
+
         <div class="container">
+
             <div class="tabs-wrapper">
+
                 <button class="tab-btn active" data-tab="tab-map">
+
                     <i class="fa-solid fa-map-marked-alt"></i> الخريطة والمحاكاة
+
                 </button>
+
                 <button class="tab-btn" data-tab="tab-summary">
+
                     <i class="fa-solid fa-compass"></i> ملخص الطرق
+
                 </button>
+
                 <button class="tab-btn" data-tab="tab-stations">
+
                     <i class="fa-solid fa-gas-pump"></i> أفضل المحطات
+
                 </button>
-                <button class="tab-btn" data-tab="tab-buraidah">
-                    <i class="fa-solid fa-tree"></i> توقف بريدة
-                </button>
+
+                <button class="tab-btn" data-tab="tab-fuelway"><i class="fa-solid fa-gas-pump"></i> استراحة Fuel
+                    Way</button>
+
                 <button class="tab-btn" data-tab="tab-medina">
+
                     <i class="fa-solid fa-kaaba"></i> دليل المدينة المنورة
+
                 </button>
+
                 <button class="tab-btn" data-tab="tab-timeline">
+
                     <i class="fa-solid fa-calendar-day"></i> الجدول الزمني
+
                 </button>
+
                 <button class="tab-btn" data-tab="tab-checklist">
+
                     <i class="fa-solid fa-list-check"></i> النصائح والتجهيزات
+
                 </button>
+
             </div>
+
         </div>
+
     </nav>
 
+
+
     <!-- Main App Content -->
+
     <main class="app-main container">
 
+
+
         <!-- TAB 0: INTERACTIVE MAP & DRIVE SIMULATOR -->
+
         <section id="tab-map" class="tab-content active">
+
             <div class="section-header">
+
                 <h2><i class="fa-solid fa-map-marked-alt"></i> الخريطة التفاعلية ومحاكاة قيادة السيارة</h2>
+
                 <p>شاهد مسار الرحلة الحقيقي المباشر من <strong>حي وسط المبرّز التاريخي (الأحساء)</strong> إلى
+
                     <strong>المدينة المنورة</strong> مع إمكانية تشغيل محاكاة حركة السيارة بين محطات التوقف.
+
                 </p>
+
             </div>
+
+
 
             <!-- Simulation Controls & Dashboard -->
+
             <div class="sim-dashboard">
+
                 <div class="sim-controls">
+
                     <button id="simStartBtn" class="btn btn-primary">
+
                         <i class="fa-solid fa-play"></i> بدء محاكاة القيادة 🚗
+
                     </button>
+
                     <button id="simPauseBtn" class="btn btn-secondary" disabled>
+
                         <i class="fa-solid fa-pause"></i> إيقاف مؤقت
+
                     </button>
+
                     <button id="simResetBtn" class="btn btn-secondary">
+
                         <i class="fa-solid fa-rotate-left"></i> إعادة الانطلاق
+
                     </button>
+
+
 
                     <div class="sim-speed-selector">
+
                         <span>سرعة المحاكاة:</span>
+
                         <button class="speed-btn active" data-speed="1">1x</button>
+
                         <button class="speed-btn" data-speed="3">3x</button>
+
                         <button class="speed-btn" data-speed="10">10x</button>
+
                     </div>
+
+
 
                     <div class="sim-route-selector">
+
                         <span>نوع المسار:</span>
+
                         <button id="btnRouteRoads" class="route-type-btn active" data-routetype="roads">
+
                             <i class="fa-solid fa-road"></i> مسار الطرق والشوراع الفعلي
+
                         </button>
+
                         <button id="btnRouteDirect" class="route-type-btn" data-routetype="direct">
+
                             <i class="fa-solid fa-ruler-horizontal"></i> الخط المباشر
+
                         </button>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="sim-telemetry">
+
                     <div class="t-box">
+
                         <span class="t-label">الموقع الحالي</span>
+
                         <span id="teleCurrentLoc" class="t-val text-accent">المبرّز التاريخي - الأحساء</span>
+
                     </div>
+
                     <div class="t-box">
+
                         <span class="t-label">الوقت المتوقع</span>
+
                         <span id="teleCurrentTime" class="t-val text-warning">05:00 صباحاً</span>
+
                     </div>
+
                     <div class="t-box">
+
                         <span class="t-label">السرعة المسموحة (ساهر)</span>
+
                         <span id="teleSpeedLimit" class="t-val text-danger"><i class="fa-solid fa-gauge-high"></i> 120
+
                             كم/س</span>
+
                     </div>
+
                     <div class="t-box">
+
                         <span class="t-label">المسافة المقطوعة</span>
+
                         <span id="teleDistDone" class="t-val">0 كم</span>
+
                     </div>
+
                     <div class="t-box">
+
                         <span class="t-label">المتبقي للمدينة</span>
+
                         <span id="teleDistRemain" class="t-val">1,150 كم</span>
+
                     </div>
+
                     <div class="t-box">
+
                         <span class="t-label">المحطة القادمة</span>
-                        <span id="teleNextStop" class="t-val text-accent">محطة ربين (129 كم)</span>
+
+                        <span id="teleNextStop" class="t-val text-accent">محطة قو ستيشن - سعّد (210 كم)</span>
+
                     </div>
+
                 </div>
+
             </div>
+
+
 
             <!-- Simulation Progress Bar -->
+
             <div class="sim-progress-container">
+
                 <div id="simProgressBar" class="sim-progress-bar"></div>
+
             </div>
+
+
 
             <!-- Leaflet Map Container -->
+
             <div id="mapContainer" class="card map-card">
+
                 <div id="map"></div>
+
             </div>
 
+
+
             <!-- 7 Speed Limits Overview Grid -->
+
             <div class="content-block margin-top-lg">
+
                 <h3><i class="fa-solid fa-gauge-high text-danger"></i> السرعات النظامية المسموحة على قطاعات الرحلة الـ 7
+
                     (رادارات ساهر)</h3>
+
                 <div class="table-responsive">
+
                     <table class="data-table">
+
                         <thead>
+
                             <tr>
+
                                 <th>#</th>
+
                                 <th>قطاع الطريق السريع</th>
+
                                 <th>المسافة</th>
+
                                 <th>السرعة القصوى المسموحة</th>
+
                                 <th>تنبيه رادار ساهر والسلامة</th>
+
                             </tr>
+
                         </thead>
+
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td><strong>الأحساء (المبرّز) ⟵ محطة ربين</strong></td>
-                                <td>129 كم</td>
-                                <td><span class="badge badge-success"><i class="fa-solid fa-gauge"></i> 120 كم/س</span>
-                                </td>
-                                <td>طريق الهفوف - الرياض، رادارات ثابتة ومتنقلة</td>
+                                <td><strong>الأحساء (المبرّز) ⟵ محطة قو ستيشن (سعّد)</strong></td>
+                                <td>210 كم</td>
+                                <td><span class="badge badge-success"><i class="fa-solid fa-gauge"></i> 120 كم/س</span></td>
+                                <td>طريق الهفوف - خريص - الرياض (السرعة النظامية 120 كم/س مراقبة بالرادار)</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td><strong>محطة ربين ⟵ محطة قو ستيشن (سعّد)</strong></td>
-                                <td>81 كم</td>
-                                <td><span class="badge badge-success"><i class="fa-solid fa-gauge"></i> 120 كم/س</span>
-                                </td>
-                                <td>كثافة شاحنات، الالتزام بالمسار الأيسر للمركبات الصغيرة</td>
+                                <td><strong>سعّد ⟵ محطة بترولي الجديدة (حي العارض - الرياض)</strong></td>
+                                <td>133 كم</td>
+                                <td><span class="badge badge-success"><i class="fa-solid fa-gauge"></i> 120 كم/س</span></td>
+                                <td>الدائري الشمالي الجديد وطريق الملك فهد / الصلبوخ (120 كم/س)</td>
                             </tr>
                             <tr class="highlight-row">
                                 <td>3</td>
-                                <td><strong>سعّد ⟵ محطة بترولي (حي العارض - الرياض)</strong></td>
-                                <td>133 كم</td>
-                                <td><span class="badge badge-success"><i class="fa-solid fa-gauge"></i> 120 كم/س</span>
-                                </td>
-                                <td>طريق الملك فهد بحي العارض شمال الرياض قبل الخروج لطريق القصيم</td>
-                            </tr>
-                            <tr class="highlight-row">
-                                <td>4</td>
-                                <td><strong>محطة بترولي (الرياض) ⟵ محطة الدريس (المجمعة)</strong></td>
+                                <td><strong>محطة بترولي الجديدة (الرياض) ⟵ محطة الدريس (المجمعة)</strong></td>
                                 <td>161 كم</td>
-                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span>
-                                </td>
+                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span></td>
                                 <td>طريق القصيم السريع المزدوج 4 مسارات (السرعة النظامية 140 كم/س)</td>
                             </tr>
                             <tr class="highlight-row">
                                 <td>4</td>
-                                <td><strong>المجمعة ⟵ مدخل مدينة بريدة (الدائري)</strong></td>
-                                <td>150 كم</td>
-                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span>
-                                </td>
-                                <td>طريق القصيم السريع المزدوج 4 مسارات</td>
+                                <td><strong>المجمعة ⟵ محطة فيول واي (طريق الرياض - القصيم السريع)</strong></td>
+                                <td>166 كم</td>
+                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span></td>
+                                <td>طريق القصيم السريع المزدوج 4 مسارات (السرعة النظامية 140 كم/س)</td>
                             </tr>
                             <tr class="highlight-row">
                                 <td>5</td>
-                                <td><strong>بريدة ⟵ محطة عقلة الصقور</strong></td>
-                                <td>210 كم</td>
-                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span>
-                                </td>
-                                <td>خط سريع دولي مفتوح (140 كم/س) — مراقبة حرارة الإطارات صيفاً</td>
+                                <td><strong>محطة فيول واي (Fuel Way) ⟵ محطة باوررود (Powerroad)</strong></td>
+                                <td>260 كم</td>
+                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span></td>
+                                <td>طريق 60 السريع المباشر (140 كم/س) — مراقبة حرارة الإطارات صيفاً</td>
                             </tr>
                             <tr class="highlight-row">
                                 <td>6</td>
-                                <td><strong>عقلة الصقور ⟵ محطة العاليات (الحناكية)</strong></td>
-                                <td>190 كم</td>
-                                <td><span class="badge badge-danger"><i class="fa-solid fa-gauge"></i> 140 كم/س</span>
-                                </td>
-                                <td>طريق 60 السريع المباشر للمدينة المنورة (140 كم/س)</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><strong>الحناكية ⟵ المسجد النبوي (المدينة المنورة)</strong></td>
-                                <td>110 كم</td>
-                                <td><span class="badge badge-warning"><i class="fa-solid fa-gauge"></i> 100 - 120
-                                        كم/س</span></td>
-                                <td>تخفيف السرعة للـ 100 كم/س عند دخول الدائري الثاني بالمدينة</td>
+                                <td><strong>محطة باوررود (Powerroad) ⟵ جامع سيّد الشهداء (المدينة المنورة)</strong></td>
+                                <td>220 كم</td>
+                                <td><span class="badge badge-warning"><i class="fa-solid fa-gauge"></i> 100 - 140 كم/س</span></td>
+                                <td>السرعة 140 كم/س على الطريق السريع ثم تخفيف السرعة للـ 100 كم/س عند مدخل المدينة وسفح جبل أحد</td>
                             </tr>
                         </tbody>
+
                     </table>
+
                 </div>
+
             </div>
+
+
 
             <!-- Waypoint Quick Selector Info -->
+
             <div class="content-block margin-top-lg">
+
                 <h3><i class="fa-solid fa-route"></i> محطات المسار على الخريطة (انقر للانتقال للموقع)</h3>
+
                 <div class="grid-4" id="waypointButtonsGrid">
+
                     <!-- Javascript populated buttons -->
+
                 </div>
+
             </div>
+
         </section>
+
+
 
         <!-- TAB 1: SUMMARY & ROUTE COMPARISON -->
+
         <section id="tab-summary" class="tab-content">
+
             <div class="section-header">
+
                 <h2><i class="fa-solid fa-map-location-dot"></i> ملخص الرحلة ومقارنة الطرق البحرية والبرية</h2>
+
                 <p>مقارنة شاملة بين الطرق المتاحة من الأحساء إلى المدينة المنورة لاختيار الطريق الأكثر أماناً وراحة
+
                     للعائلة.</p>
+
             </div>
+
+
 
             <!-- Recommended Route Banner -->
+
             <div class="alert alert-success">
+
                 <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
+
                 <div class="alert-body">
+
                     <h3>الطريق الموصى به رسمياً: الخيار الأول (الأحساء ⟵ الرياض ⟵ بريدة ⟵ المدينة المنورة)</h3>
+
                     <p>هذا الطريق عبارة عن خطوط سريعة دولية مزدوجة بالكامل (طريق 40 وطريق 60)، تتميز بأعلى معايير
-                        السلامة، وجودة الإسفلت، وكثافة محطات الخدمات الحديثة (ساسكو نخلة والدريس)، بالإضافة إلى المرور
+
+                        السلامة، وجودة الإسفلت، وكثافة محطات الخدمات الحديثة (محطات Fuel Way والدريس وبترولي النموذجية)، بالإضافة إلى المرور
+
                         المباشر بمدينة بريدة لتطبيق برنامج التوقف 4 ساعات بسهولة.</p>
+
                 </div>
+
             </div>
+
+
 
             <!-- Route Comparison Table / Cards -->
+
             <div class="grid-3">
+
                 <!-- Route 1 Card -->
+
                 <div class="card route-card recommended">
+
                     <div class="card-badge">الخيار الأول (الموصى به)</div>
+
                     <div class="route-header">
+
                         <h3>الأحساء ⟵ الرياض ⟵ بريدة ⟵ المدينة</h3>
+
                     </div>
+
                     <div class="route-stats">
+
                         <div class="r-stat"><i class="fa-solid fa-ruler-horizontal"></i> <strong>1,150 كم</strong></div>
+
                         <div class="r-stat"><i class="fa-solid fa-hourglass-half"></i> <strong>11 ساعة</strong></div>
+
                         <div class="r-stat"><i class="fa-solid fa-shield-halved"></i> <span
                                 class="badge badge-success">أمان مرتفع جداً</span></div>
+
                     </div>
+
                     <ul class="feature-list">
+
                         <li><i class="fa-solid fa-check text-success"></i> <strong>جودة الطريق:</strong> ممتاز، مسارات
+
                             مزدوجة (3-4 مسارات).</li>
+
                         <li><i class="fa-solid fa-check text-success"></i> <strong>توفّر الخدمات:</strong> كثيفة جداً
-                            (محطات ساسكو نخلة متكاملة).</li>
+
+                            (محطات Fuel Way وبترولي والدريس النموذجية).</li>
+
                         <li><i class="fa-solid fa-check text-success"></i> <strong>التغطية والسلامة:</strong> تغطية 5G
+
                             كاملة + دوريات أمن الطرق.</li>
+
                         <li><i class="fa-solid fa-check text-success"></i> <strong>التوقف ببريدة:</strong> يمر بوسط
+
                             بريدة والدائري مباشرة.</li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Route 2 Card -->
+
                 <div class="card route-card">
+
                     <div class="card-badge secondary">الخيار الثاني (مباشر المجمعة)</div>
+
                     <div class="route-header">
+
                         <h3>الأحساء ⟵ خريص ⟵ المجمعة ⟵ المدينة</h3>
+
                     </div>
+
                     <div class="route-stats">
+
                         <div class="r-stat"><i class="fa-solid fa-ruler-horizontal"></i> <strong>1,080 كم</strong></div>
+
                         <div class="r-stat"><i class="fa-solid fa-hourglass-half"></i> <strong>10.5 ساعة</strong></div>
+
                         <div class="r-stat"><i class="fa-solid fa-shield-halved"></i> <span
                                 class="badge badge-warning">أمان متوسط</span></div>
+
                     </div>
+
                     <ul class="feature-list">
+
                         <li><i class="fa-solid fa-triangle-exclamation text-warning"></i> <strong>جودة الطريق:</strong>
+
                             أجزاء مفردة وكثرة شاحنات.</li>
+
                         <li><i class="fa-solid fa-xmark text-danger"></i> <strong>توفّر الخدمات:</strong> محدودة في
+
                             الوصلات الفرعية.</li>
+
                         <li><i class="fa-solid fa-triangle-exclamation text-warning"></i> <strong>التغطية
+
                                 والسلامة:</strong> بعض المناطق منقطعة الإشارة.</li>
+
                         <li><i class="fa-solid fa-check text-success"></i> <strong>التوقف ببريدة:</strong> يلتف حول
+
                             بريدة (يتطلب انحرافاً).</li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Route 3 Card -->
+
                 <div class="card route-card">
+
                     <div class="card-badge secondary">الخيار الثالث (عفيف/الحناكية)</div>
+
                     <div class="route-header">
+
                         <h3>الأحساء ⟵ الرياض ⟵ عفيف ⟵ المدينة</h3>
+
                     </div>
+
                     <div class="route-stats">
+
                         <div class="r-stat"><i class="fa-solid fa-ruler-horizontal"></i> <strong>1,110 كم</strong></div>
+
                         <div class="r-stat"><i class="fa-solid fa-hourglass-half"></i> <strong>11.5 ساعة</strong></div>
+
                         <div class="r-stat"><i class="fa-solid fa-shield-halved"></i> <span
                                 class="badge badge-danger">غير موصى به للعوائل</span></div>
+
                     </div>
+
                     <ul class="feature-list">
+
                         <li><i class="fa-solid fa-xmark text-danger"></i> <strong>جودة الطريق:</strong> مسارات غير
+
                             مزدوجة وإبل سائبة ليلاً.</li>
+
                         <li><i class="fa-solid fa-xmark text-danger"></i> <strong>توفّر الخدمات:</strong> محطات قديمة
+
                             ومتباعدة.</li>
+
                         <li><i class="fa-solid fa-triangle-exclamation text-warning"></i> <strong>التغطية
+
                                 والسلامة:</strong> خدمات الإسعاف والدوريات متباعدة.</li>
+
                         <li><i class="fa-solid fa-xmark text-danger"></i> <strong>التوقف ببريدة:</strong> لا يمر بمدينة
+
                             بريدة إطلاقاً.</li>
+
                     </ul>
+
                 </div>
+
             </div>
+
+
 
             <!-- Driving Safety Tips Grid -->
+
             <div class="content-block margin-top-lg">
+
                 <h3><i class="fa-solid fa-shield-cat"></i> نصائح ذهبية للقيادة الآمنة والتقليل من الإرهاق</h3>
+
                 <div class="grid-2">
+
                     <div class="info-card">
+
                         <div class="info-icon"><i class="fa-solid fa-gauge-high"></i></div>
+
                         <div>
+
                             <h4>الالتزام بالسرعة النظامية (120 - 140 كم/س)</h4>
+
                             <p>جميع الخطوط السريعة مجهزة بنظام ساهر الراداري المتطور. الالتزام بالسرعة يوفر الوقود ويحمي
+
                                 الإطارات من الحرارة العالية.</p>
+
                         </div>
+
                     </div>
+
                     <div class="info-card">
+
                         <div class="info-icon"><i class="fa-solid fa-eye"></i></div>
+
                         <div>
+
                             <h4>قاعدة التوقف كل ساعتين (2-Hour Rule)</h4>
+
                             <p>لا تقود أكثر من ساعتين متواصلة. التوقف لمدة 15 دقيقة فقط في المحطات لتمديد العضلات وغسل
+
                                 الوجه يعيد التركيز بنسبة 100%.</p>
+
                         </div>
+
                     </div>
+
                     <div class="info-card">
+
                         <div class="info-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+
                         <div>
+
                             <h4>مراقبة ضغط الإطارات على البارد</h4>
+
                             <p>افحص الإطارات قبل الانطلاق. الحرارة العالية في الطريق الصحراوي تزيد ضغط الإطار بمقدار 4-6
+
                                 PSI تلقائياً.</p>
+
                         </div>
+
                     </div>
+
                     <div class="info-card">
+
                         <div class="info-icon"><i class="fa-solid fa-child"></i></div>
+
                         <div>
+
                             <h4>راحة وتسلية الطفلة أثناء القيادة</h4>
+
                             <p>قم بتوفير ألعاب ذكاء تفاعلية، أيباد بشحن كامل ومقاطع أوفلاين، مع توفير وسادة رقبة مريحة
+
                                 للنوم في المقعد الخلفي.</p>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
+
+
         <!-- TAB 2: TOP 10 REST STATIONS -->
+
+                <!-- TAB 2: BEST STATIONS -->
         <section id="tab-stations" class="tab-content">
             <div class="section-header">
-                <h2><i class="fa-solid fa-gas-pump"></i> أفضل المحطات</h2>
-                <p>تم اختيار هذه المحطات بعناية لتناسب العائلات والأطفال من حيث النظافة، وجود التكييف الممتاز، والمطاعم
-                    والمقاهي المعروفة.</p>
+                <h2><i class="fa-solid fa-gas-pump"></i> أفضل المحطات المعتمدة للرحلة</h2>
+                <p>تم اختيار هذه المحطات بعناية لتناسب راحة العائلة من حيث النظافة، جودة الوقود، المصليات المكيفة، والمطاعم والمقاهي المميزة.</p>
             </div>
 
-            <!-- Route Tabs -->
-            <div
-                style="display: flex; gap: 15px; margin-bottom: 25px; justify-content: center; background: var(--bg-alt); padding: 10px; border-radius: 12px; border: 1px solid var(--border-color);">
+            <!-- Route Tabs Switcher (Going / Return) -->
+            <div style="display: flex; gap: 15px; margin-bottom: 25px; justify-content: center; background: var(--bg-alt); padding: 10px; border-radius: 12px; border: 1px solid var(--border-color);">
                 <button class="btn btn-primary" id="btnRouteGoing"
-                    style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; transition: all 0.3s; border: none; padding: 12px;"><i
-                        class="fa-solid fa-arrow-right-to-city"></i> مسار الذهاب (للمدينة)</button>
+                    style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; transition: all 0.3s; border: none; padding: 12px; background: var(--accent-emerald); color: #fff;"><i
+                        class="fa-solid fa-arrow-right-to-city"></i> مسار الذهاب (الأحساء ⟵ جامع سيّد الشهداء بالمدينة)</button>
                 <button class="btn" id="btnRouteReturn"
                     style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; color: var(--text-color); background: transparent; border: none; padding: 12px; transition: all 0.3s;"><i
-                        class="fa-solid fa-house-chimney-return"></i> مسار العودة (للأحساء)</button>
+                        class="fa-solid fa-house-chimney-return"></i> مسار العودة (جامع سيّد الشهداء ⟵ الأحساء)</button>
             </div>
 
+            <!-- Going Route Section -->
             <div id="route-going-section">
                 <!-- Stations Filter Controls -->
-                <div class="filter-bar">
+                <div class="filter-bar" style="margin-bottom: 20px;">
                     <span class="filter-title"><i class="fa-solid fa-filter"></i> تصفية المحطات حسب القطاع:</span>
-                    <button class="filter-btn active" data-filter="all">الكل (8)</button>
+                    <button class="filter-btn active" data-filter="all">الكل (5)</button>
                     <button class="filter-btn" data-filter="sector-1">الأحساء ⟵ الرياض</button>
                     <button class="filter-btn" data-filter="sector-2">الرياض ⟵ القصيم</button>
                     <button class="filter-btn" data-filter="sector-3">القصيم ⟵ المدينة</button>
                 </div>
 
-                <!-- Stations Grid -->
+                <!-- Stations Grid (5 Stations) -->
                 <div class="grid-2" id="stationsGrid">
-                    <!-- Station 1 -->
+                    <!-- Station 1: Go Station Saad -->
                     <div class="card station-card" data-sector="sector-1">
                         <div class="station-header">
                             <span class="station-number">01</span>
                             <div class="station-title">
-                                <h3>محطة ربين (FYYA3550) - طريق الهفوف الرياض</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق الهفوف - الرياض
-                                    — <strong>129 كم</strong> من الأحساء</span>
+                                <h3>محطة قو ستيشن (Go Station) - سعّد</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق الأحساء / الرياض، 4GPM+2F4، سعّد 13876 — <strong>210 كم</strong> من نقطة الانطلاق</span>
                             </div>
                             <span class="rating"><i class="fa-solid fa-star"></i> 4.5</span>
                         </div>
                         <div class="station-body">
                             <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-store"></i> متجر تموينات</span>
-                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> قهوة</span>
-                                <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى</span>
+                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود معتمد</span>
+                                <span class="tag"><i class="fa-solid fa-store"></i> متجر وتموينات</span>
+                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> قهوة ومشروبات</span>
                                 <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه</span>
                             </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> محطة البداية، مناسبة للتزود بالوقود والقهوة قبل الانطلاق.</p>
-                            <div class="station-footer">
-                                <a href="https://www.google.com/maps/place/%D9%85%D8%AD%D8%B7%D8%A9%E2%80%AD/@25.1844375,49.0209677,201754m/data=!3m1!1e3!4m6!3m5!1s0x3e30c300480435df:0xdc328102c7061312!8m2!3d25.1841724!4d48.4165413!16s%2Fg%2F11xn9nc0rt?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Station 2 -->
-                    <div class="card station-card" data-sector="sector-1">
-                        <div class="station-header">
-                            <span class="station-number">02</span>
-                            <div class="station-title">
-                                <h3>محطة قو ستيشن (Go Station)</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق الأحساء /
-                                    الرياض، 4GPM+2F4، سعّد 13876</span>
-                            </div>
-                            <span class="rating"><i class="fa-solid fa-star"></i> 4.5</span>
-                        </div>
-                        <div class="station-body">
-                            <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-store"></i> متجر</span>
-                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه</span>
-                            </div>
-                            <p class="suitability"><i class="fa-solid fa-lightbulb text-warning"></i> <strong>الهدف من
-                                    التوقف:</strong> التزوّد بالوقود لتفادي التوقّف في زحمة الرياض، ولمعرفة مسار الطريق
-                                الصحيح.</p>
+                            <p class="suitability"><i class="fa-solid fa-lightbulb text-warning"></i> <strong>الهدف من التوقف:</strong> أول توقف رئيسي للتزوّد بالوقود والقهوة وتفادي التوقّف في زحمة الرياض، ولمعرفة مسار الطريق الصحيح.</p>
                             <div class="station-footer">
                                 <a href="https://www.google.com/maps/place/%D9%85%D8%AD%D8%B7%D8%A9+%D9%82%D9%88+%D8%B3%D8%AA%D9%8A%D8%B4%D9%86%E2%80%AD/@24.72375,47.5119326,202510m/data=!3m1!1e3!4m6!3m5!1s0x3e31d10043b761a5:0xd8fabbc011268d91!8m2!3d25.1350625!4d47.5336875!16s%2Fg%2F11y3cldnfj?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
                                     target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
@@ -577,14 +939,13 @@
                         </div>
                     </div>
 
-                    <!-- Station 3: Petroly -->
+                    <!-- Station 2: Petroly Al Arid Riyadh -->
                     <div class="card station-card" data-sector="sector-1">
                         <div class="station-header">
-                            <span class="station-number">03</span>
+                            <span class="station-number">02</span>
                             <div class="station-title">
-                                <h3>محطة بترولي (Petroly) - حي العارض الرياض</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> 6253 طريق الملك فهد،
-                                    حي العارض، الرياض 13351 — <strong>343 كم</strong> من الأحساء</span>
+                                <h3>محطة بترولي الجديدة (Petroly) - حي العارض الرياض</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> WHR4+FM6, 65، العارض، الرياض 13351 — <strong>343 كم</strong> من نقطة الانطلاق</span>
                             </div>
                             <span class="rating"><i class="fa-solid fa-star"></i> 4.1</span>
                         </div>
@@ -596,197 +957,152 @@
                                 <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى واسع</span>
                                 <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه حديثة</span>
                             </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> محطة فاخرة وحديثة تقع شمال الرياض على طريق الملك فهد (حي العارض)
-                                كاستراحة وتزود آخير قبل الخروج إلى طريق القصيم الممتد نحو المجمعة.</p>
+                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة العائلة:</strong> نموذجية ونظيفة، مثالية لتعبئة الوقود والقهوة والراحة شمال الرياض قبل الانطلاق في طريق القصيم السريع الممتد نحو المجمعة.</p>
                             <div class="station-footer">
-                                <a href="https://www.google.com/maps/place/بترولي%E2%80%AD/@24.9502002,46.6825231,17618m/data=!3m1!1e3!4m6!3m5!1s0x3e2ee92c43002337:0xd0ca3437baf993ae!8m2!3d24.9223917!4d46.5662!16s%2Fg%2F11t4ys30v1?entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank" class="gps-btn">🗺️ صفحة محطة بترولي على خرائط قوقل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Station 4 -->
-                    <div class="card station-card" data-sector="sector-2">
-                        <div class="station-header">
-                            <span class="station-number">04</span>
-                            <div class="station-title">
-                                <h3>محطة الدريس - المجمعة</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق الرياض / القصيم
-                                    السريع — <strong>504 كم</strong> من الأحساء</span>
-                            </div>
-                            <span class="rating"><i class="fa-solid fa-star"></i> 4.00</span>
-                        </div>
-                        <div class="station-body">
-                            <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود ممتاز</span>
-                                <span class="tag"><i class="fa-solid fa-shop"></i> تموينات الدريس</span>
-                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> كافيهات ووجبات</span>
-                                <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى</span>
-                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه</span>
-                            </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> استراحة كبرى ونظيفة ومناسبة جداً للراحة والتزود بالوقود وتنشيط
-                                الطفلة قبل مواصلة السير لبريدة.</p>
-                            <div class="station-footer">
-                                <a href="https://maps.app.goo.gl/8Vs15KuU28KF7HNB8" target="_blank" class="gps-btn">🗺️
-                                    صفحة محطة الدريس بالمجمعة على خرائط قوقل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Station 5 -->
-                    <div class="card station-card" data-sector="sector-2">
-                        <div class="station-header">
-                            <span class="station-number">05</span>
-                            <div class="station-title">
-                                <h3>محطة ساسكو نخلة - مدخل بريدة الجنوبي</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق القصيم —
-                                    <strong>640 كم</strong> من الأحساء</span>
-                            </div>
-                            <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
-                        </div>
-                        <div class="station-body">
-                            <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-utensils"></i> مجمع مطاعم</span>
-                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> كافيهات عصرية</span>
-                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه ممتازة</span>
-                            </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> ممتازة جداً وأمان عالي قبل البدء ببرنامج بريدة.</p>
-                            <div class="station-footer">
-                                <a href="https://www.google.com/maps/search/?api=1&query=محطة+ساسكو+بريدة"
+                                <a href="https://maps.app.goo.gl/1SWTYeBmZiMVecDR6"
                                     target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Station 6 -->
-                    <div class="card station-card" data-sector="sector-3">
+                    <!-- Station 3: Aldrees Majmaah -->
+                    <div class="card station-card" data-sector="sector-2">
                         <div class="station-header">
-                            <span class="station-number">06</span>
+                            <span class="station-number">03</span>
                             <div class="station-title">
-                                <h3>محطة الدريس / نفط - النبهانية</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق القصيم /
-                                    المدينة — <strong>780 كم</strong> من الأحساء</span>
-                            </div>
-                            <span class="rating"><i class="fa-solid fa-star"></i> 4.2</span>
-                        </div>
-                        <div class="station-body">
-                            <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-basket-shopping"></i> بقالة</span>
-                                <span class="tag"><i class="fa-solid fa-mug-saucer"></i> قهوة سفرية</span>
-                            </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> مناسبة للتوقف السريع وتعبئة الوقود الاحتياطية.</p>
-                            <div class="station-footer">
-                                <a href="https://www.google.com/maps/search/?api=1&query=محطة+الدريس+النبهانية"
-                                    target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Station 7 -->
-                    <div class="card station-card" data-sector="sector-3">
-                        <div class="station-header">
-                            <span class="station-number">07</span>
-                            <div class="station-title">
-                                <h3>محطة ساسكو - عقلة الصقور</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> منتصف طريق
-                                    القصيم/المدينة — <strong>850 كم</strong> من الأحساء</span>
+                                <h3>محطة الدريس (المجمعة)</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق الرياض / القصيم السريع — <strong>504 كم</strong> من نقطة الانطلاق</span>
                             </div>
                             <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
                         </div>
                         <div class="station-body">
                             <div class="service-tags">
                                 <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-utensils"></i> مطاعم أرز ومغضوط</span>
-                                <span class="tag"><i class="fa-solid fa-mosque"></i> جامع واسع ومكيف</span>
-                                <span class="tag"><i class="fa-solid fa-restroom"></i> حمامات مجددة</span>
+                                <span class="tag"><i class="fa-solid fa-shop"></i> تموينات الدريس</span>
+                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> مقاهي وكافيهات</span>
+                                <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى</span>
+                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه نظيفة</span>
                             </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> محطة رئيسية فائقة الأهمية لأداء الصلاة والراحة في منتصف الطريق.
-                            </p>
+                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة العائلة:</strong> استراحة كبرى ونظيفة ومناسبة جداً للراحة والتزود بالوقود وتفريغ طاقة الطفلة قبل مواصلة السير لمحطة Fuel Way.</p>
                             <div class="station-footer">
-                                <a href="https://www.google.com/maps/search/?api=1&query=محطة+ساسكو+عقلة+الصقور"
-                                    target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
+                                <a href="https://maps.app.goo.gl/8Vs15KuU28KF7HNB8" target="_blank" class="gps-btn">🗺️ صفحة محطة الدريس بالمجمعة على خرائط قوقل</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Station 8 -->
-                    <div class="card station-card" data-sector="sector-3">
+                    <!-- Station 4: Fuel Way -->
+                    <div class="card station-card" data-sector="sector-2">
                         <div class="station-header">
-                            <span class="station-number">08</span>
+                            <span class="station-number">04</span>
                             <div class="station-title">
-                                <h3>محطة التسهيلات / ساسكو - الحناكية</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق المدينة المنورة
-                                    — <strong>1,030 كم</strong> من الأحساء</span>
+                                <h3>محطة فيول واي (Fuel Way) - طريق الرياض / القصيم</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق الرياض - القصيم السريع (طريق 65) — <strong>670 كم</strong> من نقطة الانطلاق</span>
                             </div>
-                            <span class="rating"><i class="fa-solid fa-star"></i> 4.4</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
                         </div>
                         <div class="station-body">
                             <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> بارنز كافيه</span>
-                                <span class="tag"><i class="fa-solid fa-shop"></i> تموينات</span>
+                                <span class="tag" style="background: rgba(245, 158, 11, 0.18); border-color: rgba(245, 158, 11, 0.4); font-weight: 700;"><i class="fa-solid fa-mug-hot"></i> ديوانية شاي (شاي تلقيمة بالنعناع سكر وسط ممتاز جدّاً) ☕🍃</span>
+                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود ممتاز</span>
+                                <span class="tag"><i class="fa-solid fa-utensils"></i> مجمع مطاعم ووجبات</span>
+                                <span class="tag"><i class="fa-solid fa-store"></i> تموينات وسوبرماركت</span>
+                                <span class="tag"><i class="fa-solid fa-mosque"></i> جامع ومصلى واسع</span>
+                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه ممتازة</span>
                             </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> جيدة جداً للتنفس وتناول مشروب منعش قبل 100 كم من الوصول.</p>
+                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>التوقف الرئيسي لمنتصف الرحلة:</strong> استراحة نموذجية كبرى تقع مباشرة على الخط السريع دون الدخول في زحام المدن، مثالية لتناول وجبة الغداء، أداء صلاة الظهر والعصر جمعاً وقصراً، والاستمتاع بـ <strong>شاي تلقيمة بالنعناع سكر وسط ممتاز من محل الديوانية</strong> لتجديد الحيوية والنشاط.</p>
                             <div class="station-footer">
-                                <a href="https://www.google.com/maps/search/?api=1&query=محطة+ساسكو+الحناكية"
-                                    target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
+                                <a href="https://maps.app.goo.gl/nCKH365VYGAH4MmB6"
+                                    target="_blank" class="gps-btn">🗺️ صفحة محطة Fuel Way على خرائط قوقل</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Station 9 -->
+                    <!-- Station 5: Powerroad -->
                     <div class="card station-card" data-sector="sector-3">
                         <div class="station-header">
-                            <span class="station-number">09</span>
+                            <span class="station-number">05</span>
                             <div class="station-title">
-                                <h3>محطة ساسكو - مدخل المدينة الشرقي</h3>
-                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> مدخل المدينة المنورة
-                                    — <strong>1,130 كم</strong> من الأحساء</span>
+                                <h3>محطة باوررود (Powerroad) - طريق القصيم / المدينة</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق القصيم - المدينة السريع (طريق 60 الدولي) — <strong>930 كم</strong> من نقطة الانطلاق</span>
+                            </div>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.5</span>
+                        </div>
+                        <div class="station-body">
+                            <div class="service-tags">
+                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود ممتاز</span>
+                                <span class="tag"><i class="fa-solid fa-store"></i> تموينات متكاملة</span>
+                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> كافيهات وقهوة</span>
+                                <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى</span>
+                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه</span>
+                            </div>
+                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة العائلة:</strong> محطة حديثة ومريحة على طريق القصيم - المدينة السريع، ممتازة للتوقف السريع، التزود بالوقود والقهوة، أداء الصلاة، وتمديد الأرجل في الجزء الأخير نحو المدينة المنورة.</p>
+                            <div class="station-footer">
+                                <a href="https://maps.app.goo.gl/LTjXkWtEBQZKmjht6"
+                                    target="_blank" class="gps-btn">🗺️ صفحة محطة باوررود (Powerroad) على خرائط قوقل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End of stationsGrid -->
+            </div> <!-- End of route-going-section -->
+
+            <!-- Return Trip Stations Section -->
+            <div id="route-return-section" style="display: none;">
+                <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.06) 100%); border: 1.5px solid var(--accent-emerald); border-radius: 14px; padding: 18px 22px; margin-bottom: 25px; text-align: center;">
+                    <h3 style="margin: 0 0 6px 0; color: var(--text-main);"><i class="fa-solid fa-house-chimney-return text-success"></i> مسار العودة (جامع سيّد الشهداء بالمدينة المنورة ⟵ الأحساء)</h3>
+                    <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">نقطة الانطلاق: <strong>جامع سيّد الشهداء حمزة (المدينة المنورة)</strong> — محطات العودة المعتمدة والموصى بها لراحة العائلة.</p>
+                </div>
+
+                <div class="grid-2" id="returnStationsGrid">
+                    <!-- Return Station 1: Seven Plus (Al Bukayriyah) -->
+                    <div class="card station-card" data-sector="return-sector-1">
+                        <div class="station-header">
+                            <span class="station-number">01</span>
+                            <div class="station-title">
+                                <h3>محطة سفن بلس (Seven Plus) - البكيرية</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق المدينة المنورة / القصيم السريع — <strong>البكيرية</strong> (~470 كم من جامع سيّد الشهداء)</span>
+                            </div>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                        </div>
+                        <div class="station-body">
+                            <div class="service-tags">
+                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود ممتاز</span>
+                                <span class="tag"><i class="fa-solid fa-store"></i> تموينات وسوبرماركت</span>
+                                <span class="tag"><i class="fa-solid fa-mug-hot"></i> كافيهات ومشروبات</span>
+                                <span class="tag"><i class="fa-solid fa-utensils"></i> مطاعم ووجبات</span>
+                                <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى واسع ومكيف</span>
+                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه نظيفة</span>
+                            </div>
+                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>التوقف الأول في مسار العودة:</strong> أول محطة توقف كبرى ونموذجية بعد الانطلاق من جامع سيّد الشهداء بالمدينة المنورة، مثالية لأداء صلاة الظهر والعصر جمعاً وقصراً، تناول الغداء، الراحة العائلية، والتزود بالوقود في منطقة القصيم قبل متابعة الطريق نحو الرياض والأحساء.</p>
+                            <div class="station-footer">
+                                <a href="https://maps.app.goo.gl/w9T9BRYKi7LcgU8N9"
+                                    target="_blank" class="gps-btn">🗺️ صفحة محطة سفن بلس (البكيرية) على خرائط قوقل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Return Station 2: Aramco Station (Riyadh - Qassim Highway) -->
+                    <div class="card station-card" data-sector="return-sector-2">
+                        <div class="station-header">
+                            <span class="station-number">02</span>
+                            <div class="station-title">
+                                <h3>محطة أرامكو (Aramco) - طريق القصيم / الرياض السريع</h3>
+                                <span class="station-dist"><i class="fa-solid fa-location-dot"></i> طريق القصيم - الرياض السريع (طريق 65 السريع)</span>
                             </div>
                             <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
                         </div>
                         <div class="station-body">
                             <div class="service-tags">
-                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود</span>
-                                <span class="tag"><i class="fa-solid fa-screwdriver-wrench"></i> غسيل وصيانة</span>
-                                <span class="tag"><i class="fa-solid fa-utensils"></i> مطاعم وكافيهات</span>
-                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه نموذجية</span>
+                                <span class="tag" style="background: rgba(245, 158, 11, 0.18); border-color: rgba(245, 158, 11, 0.4); font-weight: 700;"><i class="fa-solid fa-mug-hot"></i> ديوانية شاي تلقيمة ممتاز جداً ☕</span>
+                                <span class="tag"><i class="fa-solid fa-gas-pump"></i> وقود أرامكو معتمد</span>
+                                <span class="tag"><i class="fa-solid fa-store"></i> تموينات متكاملة</span>
+                                <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى</span>
+                                <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه</span>
                             </div>
-                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>ملاءمة
-                                    العائلة:</strong> محطة حديثة متكاملة لاستعادة النشاط وترتيب السيارة قبل الفندق.</p>
+                            <p class="suitability"><i class="fa-solid fa-heart text-danger"></i> <strong>التوقف الثاني في مسار العودة (توقف المزاج وتجديد النشاط):</strong> محطة أرامكو نموذجية ومريحة على طريق القصيم-الرياض، تتميز بوجود <strong>محل ديوانية يقدم شاي تلقيمة فاخر وممتاز جداً</strong> لتعديل المزاج وتنشيط السائق وأخذ استراحة ممتعة قبل الوصول إلى الرياض ومتابعة الطريق إلى الأحساء.</p>
                             <div class="station-footer">
-                                <a href="https://www.google.com/maps/search/?api=1&query=محطة+ساسكو+المدينة+المنورة"
-                                    target="_blank" class="gps-btn">🗺️ صفحة المحطة على خرائط قوقل</a>
+                                <a href="https://maps.app.goo.gl/w9T9BRYKi7LcgU8N9"
+                                    target="_blank" class="gps-btn">🗺️ صفحة محطة أرامكو على خرائط قوقل</a>
                             </div>
-                        </div>
-                    </div>
-                </div> <!-- End of stationsGrid -->
-
-            </div> <!-- End of route-going-section -->
-
-            <!-- Return Trip Stations -->
-            <div id="route-return-section" style="display: none;">
-                <h3 class="margin-bottom-md" style="text-align: center;"><i
-                        class="fa-solid fa-house-chimney-return text-primary"></i> مسار العودة (المدينة المنورة ⟵
-                    الأحساء)</h3>
-                <p style="margin-bottom: 20px; text-align: center;">محطات مقترحة في طريق العودة لتناسب راحتك بعد
-                    الزيارة.</p>
-
-                <div class="grid-2" id="returnStationsGrid">
-                    <div class="card station-card" style="grid-column: 1 / -1; text-align: center; padding: 40px;">
-                        <div class="card-body">
-                            <i class="fa-solid fa-road fa-3x text-muted" style="margin-bottom: 15px;"></i>
-                            <h3 class="text-muted" style="margin-bottom: 10px;">سيتم إضافة محطات مسار العودة قريباً</h3>
-                            <p class="text-muted">إذا كانت لديك محطات معينة تود إضافتها لطريق العودة، يمكنك تحديدها
-                                الآن.</p>
                         </div>
                     </div>
                 </div>
@@ -807,7 +1123,7 @@
 
                             btnReturn.classList.remove('btn-primary');
                             btnReturn.style.background = 'transparent';
-                            btnReturn.style.color = 'var(--text-main)';
+                            btnReturn.style.color = 'var(--text-main, var(--text-color))';
 
                             secGoing.style.display = 'block';
                             secReturn.style.display = 'none';
@@ -820,7 +1136,7 @@
 
                             btnGoing.classList.remove('btn-primary');
                             btnGoing.style.background = 'transparent';
-                            btnGoing.style.color = 'var(--text-main)';
+                            btnGoing.style.color = 'var(--text-main, var(--text-color))';
 
                             secReturn.style.display = 'block';
                             secGoing.style.display = 'none';
@@ -828,222 +1144,201 @@
                     }
                 });
             </script>
-
         </section>
+
+
 
         <!-- TAB 3: BURAIDAH 4-HOUR STOP -->
-        <section id="tab-buraidah" class="tab-content">
+
+        <!-- TAB 3: FUEL WAY MIDPOINT STOP GUIDE -->
+        <section id="tab-fuelway" class="tab-content">
             <div class="section-header">
-                <h2><i class="fa-solid fa-tree"></i> برنامج التوقف في بريدة</h2>
-                <p>محطة استراحة منتصف الطريق المثالية. جميع الفعاليات والمطاعم مختارة بالقرب من الطريق الدائري لسهولة
-                    الوصول.</p>
+                <h2><i class="fa-solid fa-gas-pump text-primary"></i> محطة واستراحة فيول واي (Fuel Way) - طريق الرياض /
+                    القصيم السريع</h2>
+                <p>استراحة وتوقف منتصف الطريق الكبرى (670 كم من الأحساء) على طريق الرياض - القصيم السريع مباشرة دون
+                    الدخول في زحام المدن.</p>
             </div>
 
-            <!-- Buraidah Hourly Schedule Interactive -->
-            <div class="buraidah-timeline">
-                <div class="b-step">
-                    <div class="b-time">الساعة 1 (12:00 - 01:00 م)</div>
-                    <div class="b-content">
-                        <h3><i class="fa-solid fa-utensils"></i> غداء عائلي سعودي شعبي وفاخر</h3>
-                        <p style="margin-bottom: 15px; color: var(--text-muted);">اختيار وجبة الغداء العائلية الرئيسية
-                            بعد قطع 640 كم من السفر لتجديد الطاقة والراحة التامة:</p>
-
-                        <!-- Primary Choice: Al Romansiah Othman Ibn Affan -->
-                        <div class="card"
-                            style="background: rgba(16, 185, 129, 0.06); border: 1px solid var(--accent-emerald); padding: 18px; border-radius: 12px; margin-bottom: 16px;">
-                            <div
-                                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
-                                <h4
-                                    style="font-size: 1.05rem; color: var(--accent-emerald); margin: 0; font-weight: 700;">
-                                    <i class="fa-solid fa-crown text-warning"></i> الخيار الأول والأفضل: مطعم الرومانسية
-                                    (فرع طريق عثمان بن عفان)
-                                </h4>
-                                <span class="badge badge-success"><i class="fa-solid fa-thumbs-up"></i> الموصى به
-                                    عائلياً</span>
-                            </div>
-
-                            <ul
-                                style="list-style: none; padding: 0; margin: 0 0 14px 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; line-height: 1.6; color: var(--text-main);">
-                                <li><strong>📍 الفرع والعنوان:</strong> طريق عثمان بن عفان، حي الإسكان / الصفراء، بريدة
-                                    (وصول سهل من الطريق الدائري).</li>
-                                <li><strong>👨‍👩‍👧 ملاءمة العائلة والطفلة:</strong> قسم عوائل مكيف، كبائن عائلية
-                                    مستقلة ومغلقة بالكامل تضمن الخصوصية التامة والراحة والنظافة بعد طريق القيادة الطويل.
-                                </li>
-                                <li><strong>🍲 أشهى الأطباق الموصى بها:</strong> المضغوط البلدي، المندي، كبسة اللحم،
-                                    المشويات المشكلة، والأرز الشعبي مع خيارات السلطات والعصائر الطازجة المفضل للأطفال.
-                                </li>
-                            </ul>
-
-                            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                                <a href="https://maps.app.goo.gl/2WWbJ89DRQdLPwFYA" target="_blank" class="gps-btn"
-                                    style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-emerald); color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(16,185,129,0.25);">
-                                    🗺️ موقع مطعم الرومانسية (طريق عثمان بن عفان) على خرائط قوقل
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Secondary Choice: Al Nadeg -->
-                        <div class="card"
-                            style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 16px; border-radius: 12px; margin-bottom: 12px;">
-                            <h4
-                                style="font-size: 0.98rem; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">
-                                <i class="fa-solid fa-utensils text-primary"></i> الخيار الثاني: مطعم الناضج (طريق الملك عبد العزيز)
-                            </h4>
-                            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0 0 12px 0; line-height: 1.6;">
-                                يشتهر بالكبسة السعودية والمظبي والمضغوط البلدي، مع جلسات عائلية واسعة ومريحة وخدمة سريعة
-                                وسلسة بعد القيادة.
-                            </p>
-                            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                                <a href="https://maps.app.goo.gl/WsUagUBgvjYtx5vBA" target="_blank" class="gps-btn"
-                                    style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary-color, #3b82f6); color: #fff; padding: 9px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(59,130,246,0.25);">
-                                    🗺️ موقع مطعم الناضج (طريق الملك عبد العزيز) على خرائط قوقل
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Alternative Options -->
-                        <div
-                            style="font-size: 0.85rem; color: var(--text-muted); padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: 8px; border-right: 3px solid var(--accent-gold);">
-                            <i class="fa-solid fa-circle-info text-warning"></i> <strong>خيارات إضافية ممتازة:</strong>
-                            مطعم حاشي باشا (الدائري الشمالي)، أو مطعم كرم بيروت للمشويات.
-                        </div>
+            <!-- Fuel Way Hero Card -->
+            <div class="card"
+                style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.06) 100%); border: 1.5px solid var(--primary-color, #3b82f6); padding: 24px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 16px;">
+                    <div>
+                        <span class="badge badge-success"
+                            style="font-size: 0.85rem; padding: 6px 14px; margin-bottom: 8px; display: inline-block;"><i
+                                class="fa-solid fa-star"></i> التوقف الرئيسي الموصى به لمنتصف الرحلة</span>
+                        <h3 style="font-size: 1.35rem; color: var(--text-main); margin: 0; font-weight: 800;">محطة فيول
+                            واي النموذجية (Fuel Way Station)</h3>
+                        <p style="color: var(--text-muted); margin: 6px 0 0 0; font-size: 0.95rem;"><i
+                                class="fa-solid fa-location-dot text-danger"></i> طريق الرياض - القصيم السريع (خط 65
+                            الدولي) — <strong>670 كم</strong> من نقطة الانطلاق بالأحساء</p>
                     </div>
-                </div>
-
-                <div class="b-step">
-                    <div class="b-time">الساعة 2 (01:00 - 02:00 م)</div>
-                    <div class="b-content">
-                        <h3><i class="fa-solid fa-mug-hot"></i> استراحة قهوة وتحلية راقية</h3>
-                        <p><strong>عنوان القهوة (Address Coffee) / كافيه بيلسان:</strong> قهوة مختصة متميزة مع جلسات
-                            عائلية مريحة وحلويات مفضلة للطفلة (وافل/بان كيك وشوكولاتة).</p>
-                        <p><em>خيار درايف ثرو سريع:</em> خطوة جمل أو ½ Million على الدائري.</p>
-                    </div>
-                </div>
-
-                <div class="b-step">
-                    <div class="b-time">الساعة 3 (02:00 - 03:00 م)</div>
-                    <div class="b-content">
-                        <h3><i class="fa-solid fa-gamepad"></i>نشاط ترفيه</h3>
-                        <p><strong>منتزه الملك عبد الله الوطني (الدائري الشرقي):</strong> مساحات خضراء شاسعة ومسارات مشي
-                            وألعاب أطفال مفتوحة (ممتاز بالأجواء المعتدلة).</p>
-                        <p><strong>ملاهي فابيلاند (FabyLand) - العثيم مول بريدة:</strong> ملاهي مغلقة ومكيفة بالكامل
-                            داخل المول تناسب عمر 10 سنوات تماماً في الأجواء الحارة.</p>
-                    </div>
-                </div>
-
-                <div class="b-step">
-                    <div class="b-time">الساعة 4 (03:00 - 04:00 م)</div>
-                    <div class="b-content">
-                        <h3><i class="fa-solid fa-bag-shopping"></i> تسوق الكليجا القصيمية والتزود بالوقود</h3>
-                        <p><strong>حلويات الأرياف / سوق الكليجا بالشبيلي:</strong> شراء الكليجا القصيمية الفاخرة المحشوة
-                            بالعسل والدبس طازجة كهدية وسناك للطريق.</p>
-                        <p>التزود بالوقود كاملاً من محطة الدائري والانطلاق بحفظ الله نحو المدينة المنورة.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Proximity Guide Table -->
-            <div class="content-block margin-top-lg">
-                <h3><i class="fa-solid fa-map-pin"></i> ترتيب الأماكن في بريدة حسب القرب من الطريق الدائري</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>المكان / النشاط</th>
-                            <th>التصنيف</th>
-                            <th>البعد عن طريق السفر</th>
-                            <th>ميزة للعائلة والأطفال</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="highlight-row">
-                            <td><strong>مطعم الرومانسية (طريق الملك عبد الله)</strong></td>
-                            <td>مطعم عائلي فاخر</td>
-                            <td><span class="badge badge-success">4 دقائق</span></td>
-                            <td>قسم عوائل مكيف، كبائن خاصة، كبسة ومندي ممتاز</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td><strong>مطعم الناضج (طريق الملك عبد العزيز)</strong></td>
-                            <td>مطعم كبسة ولحوم شعبية</td>
-                            <td><span class="badge badge-success">3 دقائق</span></td>
-                            <td>جلسات عائلية واسعة ومريحة، مضغوط ومظبي بلدي</td>
-                        </tr>
-                        <tr>
-                            <td><strong>مطعم حاشي باشا</strong></td>
-                            <td>مطعم شعبية عائلي</td>
-                            <td><span class="badge badge-success">دقيقتين فقط</span></td>
-                            <td>جلسات عائلية خاصة، خدمة سريعة</td>
-                        </tr>
-                        <tr>
-                            <td><strong>منتزه الملك عبد الله الوطني</strong></td>
-                            <td>حديقة وتنزه</td>
-                            <td><span class="badge badge-success">مباشرة على الدائري</span></td>
-                            <td>مساحات طليقة وألعاب للأطفال</td>
-                        </tr>
-                        <tr>
-                            <td><strong>العثيم مول (فابيلاند)</strong></td>
-                            <td>تسوق وملاهي مغلقة</td>
-                            <td><span class="badge badge-success">4 دقائق</span></td>
-                            <td>تكييف كامل وملاهي أطفال حديثة</td>
-                        </tr>
-                        <tr>
-                            <td><strong>حلويات الأرياف (الكليجا)</strong></td>
-                            <td>محل حلويات وتراث</td>
-                            <td><span class="badge badge-success">3 دقائق</span></td>
-                            <td>أفضل كليجا طازجة ومعمول تمر</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- TAB 4: MEDINA GUIDE -->
-        <section id="tab-medina" class="tab-content">
-            <div class="section-header">
-                <h2><i class="fa-solid fa-kaaba"></i> دليل زيارة المدينة المنورة (مرتبة حسب الأولوية الشرعية والعائلية)
-                </h2>
-                <p>أهم المعالم الدينية والمساجد التراثية والتاريخية في المدينة المنورة مع المطاعم والمقاهي الموصى بها.
-                </p>
-            </div>
-
-            <!-- Medina Items Grid -->
-            <div class="grid-2">
-                <!-- Priority 1 -->
-                <div class="card medina-card priority-1">
-                    <div class="medina-badge">الأولوية القصوى #1</div>
-                    <img src="assets/masjid_nabawi.png" class="medina-card-img" alt="المسجد النبوي الشريف">
-                    <h3><i class="fa-solid fa-mosque"></i> المسجد النبوي الشريف</h3>
-                    <p>أداء الصلوات الخمس والسلام على رسول الله ﷺ وعلى صاحبيه، والتجمع بالساحات الشريفة.</p>
-                    <div class="tips-box">
-                        <strong><i class="fa-solid fa-lightbulb text-warning"></i> نصيحة عائلية:</strong> حدد نقطة تجمع
-                        معروفة (البوابة رقم 339 أو 305) لتجنب الضياع، واستخدم عربات الجولف المتاحة بالساحات.
-                    </div>
-                    <a href="https://www.google.com/maps?q=24.4672,39.6112" target="_blank" class="gps-btn">
-                        🗺️ الموقع على الخريطة (GPS): 24.4672, 39.6112
+                    <a href="https://maps.app.goo.gl/nCKH365VYGAH4MmB6" target="_blank" class="gps-btn"
+                        style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary-color, #3b82f6); color: #fff; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 16px rgba(59,130,246,0.3); transition: all 0.3s;">
+                        🗺️ فتح موقع المحطة على خرائط قوقل
                     </a>
                 </div>
 
-                <!-- Priority 2 -->
+                <div class="service-tags" style="margin-bottom: 18px;">
+                    <span class="tag"
+                        style="background: rgba(245, 158, 11, 0.18); border-color: rgba(245, 158, 11, 0.4); font-weight: 700;"><i
+                            class="fa-solid fa-mug-hot"></i> ديوانية شاي (شاي تلقيمة بالنعناع سكر وسط ممتاز جدّاً)
+                        ☕🍃</span>
+                    <span class="tag"><i class="fa-solid fa-gas-pump"></i> جميع أنواع الوقود (91 / 95 / ديزل)</span>
+                    <span class="tag"><i class="fa-solid fa-utensils"></i> مطاعم ووجبات ساخنة</span>
+                    <span class="tag"><i class="fa-solid fa-mug-hot"></i> كافيهات وقهوة مختصة</span>
+                    <span class="tag"><i class="fa-solid fa-mosque"></i> مصلى كبير ومكيف</span>
+                    <span class="tag"><i class="fa-solid fa-restroom"></i> دورات مياه حديثة ونظيفة</span>
+                    <span class="tag"><i class="fa-solid fa-shop"></i> تموينات وسوبرماركت متكامل</span>
+                </div>
+
+                <p style="line-height: 1.7; color: var(--text-main); font-size: 0.95rem; margin: 0;">
+                    تُعد محطة <strong>Fuel Way</strong> الخيار المثالي والأمثل للعائلة، حيث تقع مباشرة على مسار الطريق
+                    السريع دون الحاجة إلى الانحراف أو الدخول إلى إشارات المرور والمناطق العمرانية، مما يوفر أكثر من
+                    <strong>45 إلى 60 دقيقة</strong> من وقت الرحلة، مع توفير كافة سبل الراحة لتناول وجبة الغداء، أداء
+                    صلاة الظهر والعصر جمعاً وقصراً، الاستمتاع بـ <strong>شاي تلقيمة بالنعناع سكر وسط ممتاز من محل
+                        الديوانية</strong>، وتنشيط الطفلة قبل مواصلة الطريق نحو المدينة المنورة.
+                </p>
+            </div>
+
+            <!-- Features Grid for Fuel Way -->
+            <div class="grid-3 margin-bottom-lg">
+                <div class="card info-card">
+                    <div class="info-icon" style="background: rgba(245, 158, 11, 0.18); color: #d97706;"><i
+                            class="fa-solid fa-mug-hot"></i></div>
+                    <h3>ديوانية شاي التلقيمة المخصوص</h3>
+                    <p>يوجد محل ديوانية شاي متميز بالمحطة يقدم <strong>شاي تلقيمة بالنعناع وسكر وسط ممتاز ومضبوط
+                            جدّاً</strong>، رائع جداً لضبط المزاج وتجديد النشاط والحيوية للسفر.</p>
+                </div>
+
+                <div class="card info-card">
+                    <div class="info-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                        <i class="fa-solid fa-utensils"></i></div>
+                    <h3>المطاعم والوجبات السريعة</h3>
+                    <p>خيارات متعددة لوجبات الغداء السريعة والصحية، بالإضافة إلى مقاهٍ توفر قهوة مختصة وعصائر طازجة
+                        وسناكات مناسبة للأطفال خلال السفر.</p>
+                </div>
+
+                <div class="card info-card">
+                    <div class="info-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;"><i
+                            class="fa-solid fa-mosque"></i></div>
+                    <h3>المصلى ودورات المياه</h3>
+                    <p>جامع ومصلى مكيف ونظيف مع مرافق وضوء واسعة ودورات مياه مجهزة بعناية تضمن راحة العائلة والخصوصية
+                        التامة.</p>
+                </div>
+            </div>
+
+            <!-- Next Sector Reminder -->
+            <div class="alert alert-info">
+                <div class="alert-icon"><i class="fa-solid fa-route"></i></div>
+                <div class="alert-body">
+                    <h4><i class="fa-solid fa-arrow-right"></i> ما بعد محطة Fuel Way (المسار الأخير للمدينة المنورة):
+                    </h4>
+                    <p>بعد الانتهاء من استراحة Fuel Way، ستواصل السير على طريق 60 السريع المباشر نحو <strong>محطة
+                            باوررود Powerroad (930 كم)</strong> وصولاً إلى <strong>جامع سيّد الشهداء حمزة بالمدينة
+                            المنورة (1,150 كم)</strong> بإذن الله تعالى.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- TAB 4: MEDINA GUIDE -->
+
+        <section id="tab-medina" class="tab-content">
+
+            <div class="section-header">
+
+                <h2><i class="fa-solid fa-kaaba"></i> دليل زيارة المدينة المنورة (مرتبة حسب الأولوية الشرعية والعائلية)
+
+                </h2>
+
+                <p>أهم المعالم الدينية والمساجد التراثية والتاريخية في المدينة المنورة مع المطاعم والمقاهي الموصى بها.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Medina Items Grid -->
+
+            <div class="grid-2">
+
+                <!-- Priority 1 -->
+
                 <div class="card medina-card priority-1">
+
+                    <div class="medina-badge">الأولوية القصوى #1</div>
+
+                    <img src="assets/masjid_nabawi.png" class="medina-card-img" alt="المسجد النبوي الشريف">
+
+                    <h3><i class="fa-solid fa-mosque"></i> المسجد النبوي الشريف</h3>
+
+                    <p>أداء الصلوات الخمس والسلام على رسول الله ﷺ وعلى صاحبيه، والتجمع بالساحات الشريفة.</p>
+
+                    <div class="tips-box">
+
+                        <strong><i class="fa-solid fa-lightbulb text-warning"></i> نصيحة عائلية:</strong> حدد نقطة تجمع
+
+                        معروفة (البوابة رقم 339 أو 305) لتجنب الضياع، واستخدم عربات الجولف المتاحة بالساحات.
+
+                    </div>
+
+                    <a href="https://www.google.com/maps?q=24.4672,39.6112" target="_blank" class="gps-btn">
+
+                        🗺️ الموقع على الخريطة (GPS): 24.4672, 39.6112
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Priority 2 -->
+
+                <div class="card medina-card priority-1">
+
                     <div class="medina-badge">الأولوية القصوى #2</div>
+
                     <img src="assets/baqi_cemetery.png" class="medina-card-img" alt="جنّة البقيع">
+
                     <h3><i class="fa-solid fa-square-person-confined"></i> جنّة البقيع وزيارة أئمة البقيع</h3>
+
                     <p style="margin-bottom: 12px;">المقبرة التاريخية الأقدم والأعظم شرفاً بالمدينة المنورة، تقع ملاصقة
+
                         للمسجد النبوي الشريف من الجهة الشرقية وتضم أجساد الآلاف من آل بيت النبوة، الصحابة، والتابعين.
+
                     </p>
+
+
 
                     <div class="baqi-details-box"
                         style="margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px; text-align: right;">
                         <h4
                             style="font-size: 0.95rem; color: var(--accent-emerald); margin-bottom: 12px; font-weight: 700;">
-                            <i class="fa-solid fa-users-line"></i> تفاصيل القبور المباركة المستحب زيارتها:
+                            <i class="fa-solid fa-users-line"></i> تفاصيل الزيارات والمقامات المباركة المستحب زيارتها:
                         </h4>
                         <ul
-                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted);">
-                            <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 8px;">
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted);">
+                            <!-- Sayyidah Fatimah Al-Zahra (AS) -->
+                            <li style="border-bottom: 1px dashed rgba(255,255,255,0.08); padding-bottom: 8px;">
+                                <strong style="color: var(--text-main); display: block; margin-bottom: 4px;"><i
+                                        class="fa-solid fa-star text-warning"
+                                        style="font-size: 0.75rem; margin-left: 5px;"></i>
+                                    زيارة السيدة فاطمة الزهراء (عليها السلام):</strong>
+                                <span style="display: block; color: var(--text-muted); font-size: 0.82rem;">سيدة نساء
+                                    العالمين وبضعة الرسول ﷺ، وتستحب زيارتها في البقيع الغرقد، والروضة الشريفة، ومقام بيت
+                                    الأحزان.</span>
+                            </li>
+
+                            <!-- Aimmah of Baqi (AS) -->
+                            <li style="border-bottom: 1px dashed rgba(255,255,255,0.08); padding-bottom: 8px;">
                                 <strong style="color: var(--text-main); display: block; margin-bottom: 6px;"><i
                                         class="fa-solid fa-heart"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-rose);"></i>
-                                    أئمة البقيع (عليهم السلام):</strong>
+                                    أئمة البقيع الأربعة (عليهم السلام):</strong>
                                 <ul
                                     style="list-style: none; padding-right: 20px; margin: 0; display: flex; flex-direction: column; gap: 4px; color: var(--text-muted); font-size: 0.82rem;">
                                     <li><i class="fa-solid fa-caret-left"
@@ -1051,7 +1346,7 @@
                                         الإمام الحسن بن علي المجتبى (عليه السلام)</li>
                                     <li><i class="fa-solid fa-caret-left"
                                             style="color: var(--accent-rose); font-size: 0.7rem; margin-left: 6px;"></i>
-                                        الإمام علي بن الحسين السجاد (عليه السلام)</li>
+                                        الإمام علي بن الحسين السجاد زين العابدين (عليه السلام)</li>
                                     <li><i class="fa-solid fa-caret-left"
                                             style="color: var(--accent-rose); font-size: 0.7rem; margin-left: 6px;"></i>
                                         الإمام محمد بن علي الباقر (عليه السلام)</li>
@@ -1060,885 +1355,1732 @@
                                         الإمام جعفر بن محمد الصادق (عليه السلام)</li>
                                 </ul>
                             </li>
-                            <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
-                                <strong style="color: var(--text-main);"><i class="fa-solid fa-person-dress"
-                                        style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-blue);"></i> آل
-                                    بيت النبي وأقرباؤه:</strong> قبر السيدة فاطمة بنت أسد (والدة الإمام علي عليه
-                                السلام)، وإبراهيم ابن النبي ﷺ، وعمات النبي.
+
+                            <!-- Umm Al-Baneen & Sukaynah & Aal Al-Bayt -->
+                            <li style="border-bottom: 1px dashed rgba(255,255,255,0.08); padding-bottom: 8px;">
+                                <strong style="color: var(--text-main); display: block; margin-bottom: 4px;"><i
+                                        class="fa-solid fa-person-dress"
+                                        style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-blue);"></i>
+                                    نساء آل البيت والهاشميات:</strong>
+                                <ul
+                                    style="list-style: none; padding-right: 20px; margin: 0; display: flex; flex-direction: column; gap: 4px; color: var(--text-muted); font-size: 0.82rem;">
+                                    <li><i class="fa-solid fa-caret-left"
+                                            style="color: var(--accent-blue); font-size: 0.7rem; margin-left: 6px;"></i>
+                                        <strong>قبر السيدة أم البنين (فاطمة بنت حزام الكلابية - عليها السلام)</strong> —
+                                        والدة أبي الفضل العباس وإخوته الشهداء.
+                                    </li>
+                                    <li><i class="fa-solid fa-caret-left"
+                                            style="color: var(--accent-blue); font-size: 0.7rem; margin-left: 6px;"></i>
+                                        <strong>السيدة سكينة بنت الإمام الحسين (عليها السلام)</strong>.
+                                    </li>
+                                    <li><i class="fa-solid fa-caret-left"
+                                            style="color: var(--accent-blue); font-size: 0.7rem; margin-left: 6px;"></i>
+                                        <strong>السيدة فاطمة بنت أسد (عليها السلام)</strong> (والدة أمير المؤمنين علي بن
+                                        أبي طالب عليه السلام).
+                                    </li>
+                                    <li><i class="fa-solid fa-caret-left"
+                                            style="color: var(--accent-blue); font-size: 0.7rem; margin-left: 6px;"></i>
+                                        بنات وعمات النبي ﷺ (السيدة زينب، رقية، أم كلثوم، والسيدة صفية وعاتكة).</li>
+                                </ul>
                             </li>
+
                             <li>
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-user-check"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-gold);"></i>
-                                    زوجات النبي والصحابة:</strong> أمهات المؤمنين (زوجات النبي ﷺ) وقبور كبار الصحابة
-                                رضوان الله عليهم أجمعين كعثمان بن عفان والعباس بن عبد المطلب.
+                                    أمهات المؤمنين والصحابة:</strong> أمهات المؤمنين (زوجات النبي ﷺ)، إبراهيم ابن النبي
+                                ﷺ، والعباس بن عبد المطلب، وقبور كبار الصحابة رضوان الله عليهم أجمعين.
                             </li>
                         </ul>
                     </div>
 
                     <div class="tips-box">
+
                         <strong><i class="fa-solid fa-clock text-accent"></i> أوقات فتح أبواب البقيع:</strong> يُفتح
+
                         البقيع للزيارة يومياً فور الانتهاء من صلاة الفجر، وفور الانتهاء من صلاة العصر.
+
                     </div>
+
                     <a href="https://www.google.com/maps?q=24.4670,39.6160" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4670, 39.6160
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 3 -->
+
                 <div class="card medina-card priority-1">
+
                     <div class="medina-badge">الأولوية القصوى #3</div>
+
                     <img src="assets/rawdah_sharifah.png" class="medina-card-img" alt="الروضة الشريفة">
+
                     <h3><i class="fa-solid fa-hands-praying"></i> الروضة الشريفة (مع نصائح الحجز)</h3>
+
                     <p>الصلاة في الروضة الشريفة (روضة من رياض الجنة).</p>
+
                     <div class="tips-box alert-danger">
+
                         <strong><i class="fa-solid fa-circle-exclamation"></i> إجباري نسك:</strong> يجب الحجز المسبق عبر
+
                         تطبيق <strong>نُسُك (Nusuk)</strong>. يُسمح بالزيارة مرة واحدة كل 365 يوماً لكل زائر. احتفظ برمز
+
                         ال QR على الجوال، واحضر مبكراً عن الموعد.
+
                     </div>
+
                     <a href="https://www.google.com/maps?q=24.4674,39.6115" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4674, 39.6115
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 4 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #4</div>
+
                     <img src="assets/quba_mosque.png" class="medina-card-img" alt="مسجد قباء">
+
                     <h3><i class="fa-solid fa-place-of-worship"></i> مسجد قباء وجادة قباء</h3>
+
                     <p>أول مسجد أُسس على التقوى. صلاة ركعتين فيه تعادل أجر عمرة كاملة (يُفضل زيارته يوم السبت اقتداءً
+
                         بالسنة النبوية).</p>
+
                     <div class="tips-box">
+
                         <strong>ممر مشاة قباء:</strong> مسار مشاة مخصص وآمن يربط المسجد النبوي بمسجد قباء مليء بالمقاهي
+
                         والجلسات العائلية المسائية.
+
                     </div>
+
                     <a href="https://www.google.com/maps?q=24.4392,39.6173" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4392, 39.6173
+
                     </a>
+
                 </div>
 
+
+
                 <!-- Priority 5 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #5</div>
+
                     <img src="assets/seven_mosques.png" class="medina-card-img"
                         style="height: auto; max-height: 550px; object-fit: contain;"
                         alt="المساجد السبعة وموقع غزوة الخندق">
+
                     <h3><i class="fa-solid fa-shield-halved"></i> المساجد السبعة وموقع غزوة الخندق</h3>
+
                     <p>موقع معركة الخندق التاريخي غرب جبل سلع، ويضم مجموعة مساجد تاريخية مباركة (مسجد الفتح الأعلى، مسجد
+
                         سلمان الفارسي، مسجد علي بن أبي طالب، ومسجد فاطمة الزهراء عليها السلام) وهو المكان الذي دعا فيه
+
                         النبي بالفتح واستجيب له.</p>
+
+
 
                     <div class="mosques-details-box"
                         style="margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px; text-align: right;">
+
                         <h4
                             style="font-size: 0.95rem; color: var(--accent-emerald); margin-bottom: 12px; font-weight: 700;">
+
                             <i class="fa-solid fa-circle-info"></i> تفاصيل المساجد السبعة التاريخية ومسمياتها:
+
                         </h4>
+
                         <ul
                             style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted);">
+
                             <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-mosque"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-emerald);"></i>
+
                                     مسجد الفتح:</strong> أكبر المساجد مساحة ويقع على ربوة جبل سلع، وهو أعظمها لكونه مكان
+
                                 دعاء النبي ﷺ يوم الأحزاب.
+
                             </li>
+
                             <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-mosque"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-emerald);"></i>
+
                                     مسجد سلمان الفارسي:</strong> يقع جنوب مسجد الفتح على قاعدة جبل سلع.
+
                             </li>
+
                             <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-mosque"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-emerald);"></i>
+
                                     مسجد أبو بكر الصديق:</strong> يقع إلى الغرب من مسجد سلمان على مسافة قريبة.
+
                             </li>
+
                             <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-mosque"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-emerald);"></i>
+
                                     مسجد عمر بن الخطاب:</strong> يقع جنوب مسجد أبي بكر ويتخذ شكلاً مستطيلاً.
+
                             </li>
+
                             <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-mosque"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-emerald);"></i>
+
                                     مسجد علي بن أبي طالب:</strong> يقع على رابية مرتفعة شرقي مسجد فاطمة.
+
                             </li>
+
                             <li style="border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 6px;">
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-mosque"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-emerald);"></i>
+
                                     مسجد فاطمة الزهراء:</strong> أصغر المساجد السبعة مساحة ويُعرف تاريخياً بمسجد سعد بن
+
                                 معاذ.
+
                             </li>
+
                             <li>
+
                                 <strong style="color: var(--text-main);"><i class="fa-solid fa-circle-question"
                                         style="font-size: 0.75rem; margin-left: 5px; color: var(--accent-gold);"></i>
+
                                     المسجد السابع:</strong> يختلف المؤرخون في تحديده، فمنهم من يضيف إليه مسجد القبلتين
+
                                 أو مسجد الراية لتكتمل التسمية سبعة.
+
                             </li>
+
                         </ul>
+
                     </div>
 
+
+
                     <a href="https://www.google.com/maps?q=24.4770,39.5940" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4770, 39.5940
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 6 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #6</div>
+
                     <img src="assets/mount_uhud.png" class="medina-card-img" alt="جبل أحد ومقبرة الشهداء">
+
                     <h3><i class="fa-solid fa-mountain"></i> جبل أحد ومقبرة الشهداء</h3>
+
                     <p>جبل يحبنا ونحبه. زيارة مقبرة الشهداء (سيد الشهداء حمزة بن عبد المطلب رضي الله عنه) والصعود الخفيف
+
                         لجبل الرماة وتجنب أوقات الظهيرة الحارة صيفاً.</p>
+
                     <a href="https://www.google.com/maps?q=24.5034,39.6110" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.5034, 39.6110
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 7 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #7</div>
+
                     <img src="assets/qiblatain_mosque.png" class="medina-card-img" alt="مسجد القبلتين">
+
                     <h3><i class="fa-solid fa-compass"></i> مسجد القبلتين</h3>
+
                     <p>المسجد التاريخي العريق الذي شهد تحويل القبلة في الصلاة من بيت المقدس إلى الكعبة المشرفة بمكة
+
                         المكرمة.</p>
+
                     <a href="https://www.google.com/maps?q=24.4842,39.5786" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4842, 39.5786
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 8 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #8</div>
+
                     <img src="assets/ghamama_mosque.png" class="medina-card-img" alt="مسجد الغمامة ومساجد المصلى">
+
                     <h3><i class="fa-solid fa-cloud-sun"></i> مسجد الغمامة ومساجد المصلى</h3>
+
                     <p>تقع بالجهة الغربية الجنوبية للمسجد النبوي (منطقة المناخة)، وهي المساجد التاريخية التي صلى بها
+
                         النبي ﷺ صلاة العيد وصلاة الاستسقاء ونزلت فيها الغمامة مظللة للنبي.</p>
+
                     <a href="https://www.google.com/maps?q=24.4650,39.6080" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4650, 39.6080
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 9 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #9</div>
+
                     <img src="assets/ijabah_mosque.png" class="medina-card-img" alt="مسجد الإجابة">
+
                     <h3><i class="fa-solid fa-kaaba"></i> مسجد الإجابة</h3>
+
                     <p>مسجد تاريخي قريب من البقيع دعا فيه النبي ﷺ بثلاث دعوات واستجيب له في اثنتين، وتستحب الصلاة
+
                         والزيارة فيه.</p>
+
                     <a href="https://www.google.com/maps?q=24.4735,39.6210" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4735, 39.6210
+
                     </a>
+
                 </div>
 
+
+
                 <!-- Priority 10 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #10</div>
+
                     <img src="assets/quran_complex.png" class="medina-card-img"
                         alt="مجمع الملك فهد لطباعة المصحف الشريف">
+
                     <h3><i class="fa-solid fa-book-quran"></i> مجمع الملك فهد لطباعة المصحف الشريف</h3>
+
                     <p>مشاهدة مراحل طباعة وتجليد القرآن الكريم وتلقي مصحف هدية معتمد مع نهاية الزيارة.</p>
+
                     <div class="tips-box">
+
                         <strong>رابط وتوقيت الحجز:</strong> يتطلب حجزاً عبر موقع المجمع (<a
                             href="https://visit.qurancomplex.gov.sa" target="_blank"
                             style="color:var(--accent-emerald);">visit.qurancomplex.gov.sa</a>). المواعيد: (الأحد -
+
                         الخميس: 7-12ظ / 2-9م).
+
                     </div>
+
                     <a href="https://www.google.com/maps?q=24.5010,39.5440" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.5010, 39.5440
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 11 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #11</div>
+
                     <img src="assets/hejaz_railway.png" class="medina-card-img"
                         alt="متحف سكة حديد الحجاز ومتحف دار المدينة">
+
                     <h3><i class="fa-solid fa-train"></i> متحف سكة حديد الحجاز ومتحف دار المدينة</h3>
+
                     <p>تجربة تاريخية وتعليمية ممتازة للطفلة لمشاهدة القطار العثماني القديم ومجسمات السيرة النبوية
+
                         التفاعلية.</p>
+
                     <a href="https://www.google.com/maps?q=24.4615,39.6025" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4615, 39.6025
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 12 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #12</div>
+
                     <img src="assets/suqya_mosque.png" class="medina-card-img" alt="مسجد السقيا وبئر السقيا التاريخية">
+
                     <h3><i class="fa-solid fa-droplet"></i> مسجد السقيا وبئر السقيا التاريخية</h3>
+
                     <p>المسجد الباروك المبارك القريب من محطة سكة حديد الحجاز، وهو الموقع الذي استعرض فيه النبي ﷺ جيش
+
                         غزوة بدر ودعا فيه لأهل المدينة بالبركة وشرب وتوضأ من بئر السقيا.</p>
+
                     <a href="https://www.google.com/maps?q=24.4602,39.6015" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4602, 39.6015
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 13 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #13</div>
+
                     <img src="assets/shajarah_mosque.png" class="medina-card-img" alt="مسجد الشجرة (ميقات ذو الحليفة)">
+
                     <h3><i class="fa-solid fa-person-praying"></i> مسجد الشجرة (ميقات ذو الحليفة)</h3>
+
                     <p>ميقات أهل المدينة المنورة والزوار للإحرام بالحج والعمرة، المسجد المعماري المتميز ذو المنارة
+
                         الشاهقة والحدائق الخضراء.</p>
+
                     <a href="https://www.google.com/maps?q=24.4128,39.5432" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4128, 39.5432
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 14 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #14</div>
+
                     <img src="assets/jummah_mosque.png" class="medina-card-img" alt="مسجد الجمعة">
+
                     <h3><i class="fa-solid fa-calendar-week"></i> مسجد الجمعة (مسجد عاتكة / الوادي)</h3>
+
                     <p>المسجد التاريخي الذي أدى فيه رسول الله ﷺ أول صلاة جمعة في الإسلام عند قدومه ومهاجره إلى المدينة
+
                         المنورة.</p>
+
                     <a href="https://www.google.com/maps?q=24.4448,39.6158" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4448, 39.6158
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 15 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #15</div>
+
                     <img src="assets/fadaykh_mosque.png" class="medina-card-img" alt="مسجد الفضيخ (مسجد الشمس)">
+
                     <h3><i class="fa-solid fa-sun"></i> مسجد الفضيخ (مسجد الشمس)</h3>
+
                     <p>مسجد تاريخي يقع بمنطقة العوالي الشرقية بالقرب من قباء، صلى فيه النبي ﷺ وتستحب زيارته والتبرك
+
                         بالصلاة فيه.</p>
+
                     <a href="https://www.google.com/maps?q=24.4430,39.6325" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4430, 39.6325
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 16 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #16</div>
+
                     <img src="assets/ghars_well.png" class="medina-card-img" alt="بئر غرس وبئر عثمان بن عفان">
+
                     <h3><i class="fa-solid fa-faucet-drip"></i> بئر غرس وبئر عثمان بن عفان</h3>
+
                     <p>البئر التاريخية المباركة القريبة من قباء التي كان النبي ﷺ يشرب منها وتوضأ منها وأوصى أن يُغسل من
+
                         مائها، وبئر رومة التاريخية.</p>
+
                     <a href="https://www.google.com/maps?q=24.4485,39.6260" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4485, 39.6260
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 17 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #17</div>
+
                     <img src="assets/aqiq_valley.png" class="medina-card-img" alt="وادي العقيق المبارك وجبل عير">
+
                     <h3><i class="fa-solid fa-water"></i> وادي العقيق المبارك وجبل عير</h3>
+
                     <p>الوادي الذي قال فيه النبي ﷺ: (أتاني آتٍ من ربي فقال: صلِّ في هذا الوادي المبارك)، وهو ممشى
+
                         ومُتنزه طبيعي خلاب للعائلة.</p>
+
                     <a href="https://www.google.com/maps?q=24.4420,39.5580" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4420, 39.5580
+
                     </a>
+
                 </div>
+
+
 
                 <!-- Priority 18 -->
+
                 <div class="card medina-card">
+
                     <div class="medina-badge secondary">المرتبة #18</div>
+
                     <img src="assets/central_park.png" class="medina-card-img" alt="حديقة ومنتزه الملك فهد المركزي">
+
                     <h3><i class="fa-solid fa-tree"></i> حديقة ومنتزه الملك فهد المركزي</h3>
+
                     <p>أكبر منتزه عائلي بالمدينة المنورة يضم مساحات خضراء طليقة، قطار الحديقة، ألعاب أطفال، ومقاهٍ
+
                         عائلية ممتازة للمساء.</p>
+
                     <a href="https://www.google.com/maps?q=24.4280,39.6240" target="_blank" class="gps-btn">
+
                         🗺️ الموقع على الخريطة (GPS): 24.4280, 39.6240
+
                     </a>
+
                 </div>
+
             </div>
 
+
+
             <!-- Medina Malls, Food & Cafes -->
+
             <div class="content-block margin-top-lg">
+
                 <h3><i class="fa-solid fa-utensils"></i> دليل الأنشطة العائلية، المطاعم، والمزارع بالمدينة المنورة</h3>
+
                 <div class="grid-2">
+
                     <!-- Column 1: Shopping & Malls -->
+
                     <div class="info-card">
+
                         <div class="info-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+
                         <div>
+
                             <h4>الأسواق والواجهات العائلية</h4>
 
+
+
                             <p><strong>1. أسواق المنطقة المركزية (قرب الحرم)</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-person-walking"></i> دقيقة واحدة
+
                                     مشياً</span><br>
+
                                 شراء عطور المسك والتمور والهدايا التذكارية عبر بوابات الحرم (بوابة 339 مليئة
+
                                 بالمعارض).<br><br>
 
+
+
                                 <strong>2. واجهة وممشى جادة قباء التراثية</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-car"></i> 1.5 كم من
+
                                     الحرم</span><br>
+
                                 شارع تسوق عائلي مفتوح يضم محلات ومطاعم ومقاهٍ وجلسات مسائية خلابة.<br><br>
 
+
+
                                 <strong>3. سوق التمور المركزي بالمدينة</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-car"></i> 1 كم جنوب
+
                                     الحرم</span><br>
+
                                 أفضل موقع لشراء عجوة المدينة والتمور الفاخرة الطازجة مباشرة.<br><br>
 
+
+
                                 <strong>4. واجهة مسجد القبلتين الجديدة</strong><br>
+
                                 <span class="badge badge-warning"><i class="fa-solid fa-car"></i> 4.5 كم من
+
                                     الحرم</span><br>
+
                                 ممشى وواجهة حديثة تضم مطاعم ومقاهٍ وجلسات مفتوحة للمشي والتسوق.<br><br>
 
+
+
                                 <strong>5. شركة توفير المدينة (مجمع بوخمسة)</strong><br>
+
                                 <span class="badge badge-warning"><i class="fa-solid fa-car"></i> تسوق
+
                                     اقتصادي</span><br>
+
                                 معرض متكامل يوفر مستلزمات وهدايا ألعاب ملابس بأفضل الأسعار التنافسية بالمدينة.<br><br>
 
+
+
                                 <strong>6. مولات المدينة الكبرى (النور / الراشد / العالية)</strong><br>
+
                                 <span class="badge badge-warning"><i class="fa-solid fa-car"></i> مولات مغلقة</span><br>
+
                                 تضم صالات ألعاب أطفال (سباركيز)، مطاعم عالمية، وسينما، وسوق وسط المدينة التراثي.
+
                             </p>
+
                         </div>
+
                     </div>
+
+
 
                     <!-- Column 2: Restaurants -->
+
                     <div class="info-card highlight-card"
                         style="border: 1.5px solid var(--accent-emerald); background: rgba(16, 185, 129, 0.05);">
+
                         <div class="info-icon" style="background: rgba(16, 185, 129, 0.15);"><i
                                 class="fa-solid fa-burger"></i></div>
+
                         <div>
+
                             <h4>المطاعم المحلية والتراثية الموصى بها</h4>
 
+
+
                             <p><strong>1. مطعم دار بسمة (حساوي 🌴)</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-thumbs-up"></i> نوصي به
+
                                     للعائلة</span><br>
+
                                 يقدم طعام حساوي تراثي مميز (خبز أحمر، كبسة حساوية) يربطكم بذكريات الأحساء والمنطقة
+
                                 الشرقية.<br><br>
 
+
+
                                 <strong>2. مطعم شهزاد (إيراني 🍲 - الأجدد)</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-star"></i> راقٍ وجديد</span><br>
+
                                 أفخم المطاعم الإيرانية الجديدة بالمدينة يقدم المشويات والرز الزعفراني والكبائن
+
                                 المغلقة.<br><br>
 
+
+
                                 <strong>3. مطعم بهارات (هندي 🌶️)</strong><br>
+
                                 <span class="badge badge-warning"><i class="fa-solid fa-fire"></i> مذاق هندي
+
                                     أصيل</span><br>
+
                                 خيار ممتاز لعشاق البرياني والماسالا الحارة مع جلسات عائلية مريحة.<br><br>
 
+
+
                                 <strong>4. مطعم المزار الدمشقي وتل الهوى</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-utensils"></i> مشويات
+
                                     شامية</span><br>
+
                                 تشكيلة واسعة من كباب اللحم والشاورما والمقبلات الشامية اللذيذة.<br><br>
 
+
+
                                 <strong>5. مطعم زمان جدي والرصافة</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-house"></i> شعبي
+
                                     وتراثي</span><br>
+
                                 مأكولات شعبية وتراثية وجلسات واسعة تناسب التجمعات العائلية المريحة.<br><br>
 
+
+
                                 <strong>6. مطعم البيك (فرع الساحات وقباء)</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-person-walking"></i> دقيقتين من
+
                                     الحرم</span><br>
+
                                 الوجبة المفضلة والسهلة للأطفال (مسحب دجاج وبروستد).<br><br>
 
+
+
                                 <strong>7. مطعم الرومانسية وطباخ الريف</strong><br>
+
                                 <span class="badge badge-warning"><i class="fa-solid fa-car"></i> كبسة ومندي</span><br>
+
                                 الخيار الأفضل للرز البخاري، الكابلي، المندي مع كبائن عائلية مغلقة وساترة.
+
                             </p>
+
                         </div>
+
                     </div>
 
+
+
                     <!-- Column 3: Farms & Green Outings -->
+
                     <div class="info-card">
+
                         <div class="info-icon"
                             style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.1);"><i
                                 class="fa-solid fa-leaf"></i></div>
+
                         <div>
+
                             <h4>بساتين ومزارع المدينة التراثية</h4>
 
+
+
                             <p><strong>1. بستان ومزرعة المربد التراثية</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> دخول مجاني
+
                                     (نهاري ☀️)</span><br>
+
                                 أجواء ريفية ساحرة، ممشى بين النخيل الباسق، ومقاهٍ شعبية هادئة وجلسات مريحة.<br><br>
 
+
+
                                 <strong>2. ريف البستان وجلساته الخضراء</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> دخول مجاني
+
                                     (نهاري ☀️)</span><br>
+
                                 مزرعة تاريخية منسقة للعوائل يفضل زيارتها نهاراً للتمتع بجمال الطبيعة.<br><br>
 
+
+
                                 <strong>3. مزرعة سلمان الفارسي وبئر الفقير</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> موقع أثري
+
                                     مجاني</span><br>
+
                                 موقع بئر الفقير الأثري وجواره المزرعة التاريخية التي كاتب فيها سلمان الفارسي وغرس بها
+
                                 النبي النخل.<br><br>
 
+
+
                                 <strong>4. متحف وبستان الصافية التفاعلي</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> دخول
+
                                     مجاني</span><br>
+
                                 مشروع حديث بجوار ساحات الحرم يضم مجسمات وشاشات تفاعلية وحديقة نخيل ممتازة.<br><br>
 
+
+
                                 <strong>5. بستان الإمام الكاظم (مزرعة صريا)</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> دخول
+
                                     مجاني</span><br>
+
                                 بستان هادئ ذو إطلالة ممتازة وجلسات عائلية ريفية تقليدية.<br><br>
 
+
+
                                 <strong>6. واحة ميلاف وسوشل فارم وبستان المستظل</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> دخول
+
                                     مجاني</span><br>
+
                                 مزارع مجهزة كمتنزهات ريفية ومقاهي وجلسات شواء بالهواء الطلق.
+
                             </p>
+
                         </div>
+
                     </div>
 
+
+
                     <!-- Column 4: Kids Play & Special Activities -->
+
                     <div class="info-card">
+
                         <div class="info-icon"
                             style="color: var(--accent-purple); background: rgba(139, 92, 246, 0.1);"><i
                                 class="fa-solid fa-child-reaching"></i></div>
+
                         <div>
+
                             <h4>ألعاب أطفال ومناطق ترفيه مميزة</h4>
 
+
+
                             <p><strong>1. حديقة زهور المقر وسياكل الجبل 🚲</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-mountain"></i> بجوار جبل
+
                                     أحد</span><br>
+
                                 موقع رائع يضم حديقة الزهور وتأجير دراجات هوائية وسيارات أطفال وكبار (يفضل جلب فرشة وجلسة
+
                                 للجلوس).<br><br>
 
+
+
                                 <strong>2. ملاهي الطفل المغامر للألعاب</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-gamepad"></i> ترفيه
+
                                     حركي</span><br>
+
                                 ملاهٍ مخصصة للأطفال توفر أنشطة وفعاليات حركية ومسابقات شيقة وممتعة للطفلة.<br><br>
 
+
+
                                 <strong>3. متجر يمي الكوري (Yummy Korean Store 🇰🇷)</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-candy-cane"></i> للفتيات
+
                                     والأطفال</span><br>
+
                                 محل مميز لبيع المنتجات والأغذية والألعاب الكورية الخفيفة التي تحبها الفتيات في سن الـ 10
+
                                 سنوات.<br><br>
 
+
+
                                 <strong>4. متحف السيرة النبوية الشريفة</strong><br>
+
                                 <span class="badge badge-warning"><i class="fa-solid fa-ticket"></i> تذاكر (40
+
                                     ريال)</span><br>
+
                                 تقنيات عرض سينمائية حديثة ومجسمات تفاعلية تقرب السيرة النبوية لأذهان الأطفال.<br><br>
 
+
+
                                 <strong>5. محمية الأوسية للطيور</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-dove"></i> تجربة
+
                                     طبيعية</span><br>
+
                                 محمية طبيعية ممتازة لمشاهدة وتغذية الطيور النادرة والتقاط الصور التذكارية معها
+
                                 للطفلة.<br><br>
 
+
+
                                 <strong>6. منتزه درة المدينة وألعاب كاينتك وهوى</strong><br>
+
                                 <span class="badge badge-success"><i class="fa-solid fa-face-smile"></i> ألعاب
+
                                     داخلية</span><br>
+
                                 صالات ألعاب مغلقة وألعاب كاينتيك حركية وترامبولين ممتعة للأطفال.
+
                             </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
+
+
 
         <!-- TAB 5: TIMELINE SCHEDULE -->
+
         <section id="tab-timeline" class="tab-content">
+
             <div class="section-header">
+
                 <h2><i class="fa-solid fa-calendar-day"></i> الجدول الزمني المقترح والحيوي للرحلة البرية</h2>
+
                 <p>اختر وقت بداية انطلاقك وتنسيق مدة الاستراحة في كل محطة، ليعيد النظام حساب الجدول الزمني ومواعيد
+
                     الوصول تلقائياً.</p>
+
             </div>
+
+
 
             <!-- Interactive Schedule Controls Box -->
+
             <div class="timeline-control-card margin-bottom-md">
+
                 <div class="control-group-main" style="gap: 24px; flex-wrap: wrap;">
+
                     <div class="control-group-sub"
                         style="display: flex; align-items: center; gap: 16px; flex: 1; min-width: 280px;">
+
                         <div class="control-icon-wrapper">
+
                             <i class="fa-solid fa-calendar-days text-accent"></i>
+
                         </div>
+
                         <div class="control-info" style="flex: 1;">
+
                             <label for="startDateInput" class="control-label">
+
                                 <i class="fa-solid fa-calendar-day text-success"></i> يوم الانطلاق (التاريخ الميلادي):
+
                             </label>
+
                             <input type="date" id="startDateInput" class="timeline-select-lg"
                                 style="box-sizing: border-box;">
+
                         </div>
+
                     </div>
+
                     <div class="control-group-sub"
                         style="display: flex; align-items: center; gap: 16px; flex: 1; min-width: 280px;">
+
                         <div class="control-icon-wrapper">
+
                             <i class="fa-solid fa-clock text-accent"></i>
+
                         </div>
+
                         <div class="control-info" style="flex: 1;">
+
                             <label for="startTimeSelect" class="control-label">
+
                                 <i class="fa-solid fa-flag text-success"></i> تحديد وقت انطلاق الرحلة (بداية الوقت):
+
                             </label>
+
                             <select id="startTimeSelect" class="timeline-select-lg">
+
                                 <!-- Populated dynamically from 12:00 AM to 12:00 PM via JS -->
+
                             </select>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="control-actions">
+
                     <button id="resetScheduleBtn" class="btn btn-sm btn-secondary"
                         title="إعادة تعيين الأوقات الافتراضية">
+
                         <i class="fa-solid fa-arrow-rotate-left"></i> إعادة ضبط التوقيت الافتراضي
+
                     </button>
+
                 </div>
+
             </div>
+
+
 
             <!-- Timeline Time Summary Stats Card -->
+
             <div class="timeline-summary-card margin-bottom-md">
+
                 <div class="summary-row-pill">
+
                     <i class="fa-solid fa-car-side pill-far-icon" style="color: #10b981;"></i>
+
                     <span class="pill-label">زمن القيادة الفعلي (الصافي)</span>
+
                     <span class="pill-val" id="statDriveTime">11 ساعة <i class="fa-solid fa-car-side"></i></span>
+
                 </div>
+
                 <div class="summary-row-pill">
+
                     <i class="fa-solid fa-mug-hot pill-far-icon" style="color: #f59e0b;"></i>
+
                     <span class="pill-label">إجمالي مدة الاستراحات بالمحطات</span>
+
                     <span class="pill-val" id="statRestTime">3 ساعة و 15 دقيقة <i
                             class="fa-solid fa-mug-hot"></i></span>
+
                 </div>
+
                 <div class="summary-row-pill">
+
                     <i class="fa-solid fa-flag-checkered pill-far-icon" style="color: #ffffff;"></i>
+
                     <span class="pill-label">موعد الوصول المتوقع للمدينة</span>
+
                     <div class="pill-val-group" id="statTotalArrival">
+
                         <span class="pill-val">07:15 صباحاً <i class="fa-solid fa-flag-checkered"></i></span>
+
                         <span class="pill-subtext">الأحد، 9 أغسطس 2026</span>
+
                     </div>
+
                 </div>
+
                 <div class="summary-row-pill">
+
                     <i class="fa-solid fa-hourglass-half pill-far-icon" style="color: #10b981;"></i>
+
                     <span class="pill-label">المدة الإجمالية للرحلة بالكامل</span>
+
                     <span class="pill-val text-accent" id="statTotalDuration">14 ساعة و 15 دقيقة <i
                             class="fa-solid fa-hourglass-half"></i></span>
+
                 </div>
+
             </div>
+
+
 
             <!-- Dynamic Interactive Timeline Table -->
+
             <div class="table-responsive">
+
                 <table class="data-table timeline-table">
+
                     <thead>
+
                         <tr>
+
                             <th style="min-width: 130px;"><i class="fa-solid fa-clock"></i> الوقت المتوقع</th>
+
                             <th style="min-width: 90px;"><i class="fa-solid fa-route"></i> المسافة</th>
+
                             <th style="min-width: 100px;"><i class="fa-solid fa-gauge-high"></i> زمن القيادة</th>
+
                             <th style="min-width: 200px;"><i class="fa-solid fa-map-pin"></i> مكان التوقف / المحطة</th>
+
                             <th style="min-width: 170px;"><i class="fa-solid fa-stopwatch"></i> وقت الاستراحة (تعديل حي)
+
                             </th>
+
                             <th style="min-width: 260px;"><i class="fa-solid fa-circle-info"></i> ملاحظات وتوصيات مهمة
+
                             </th>
+
                         </tr>
+
                     </thead>
+
                     <tbody id="timelineTableBody">
+
                         <!-- Javascript Populated Dynamic Rows -->
+
                     </tbody>
+
                     <tfoot id="timelineTableFoot">
+
                         <!-- Javascript Populated Dynamic Summary Footer -->
+
                     </tfoot>
+
                 </table>
+
             </div>
+
         </section>
+
+
 
         <!-- TAB 6: CHECKLIST & PRACTICAL TIPS -->
+
         <section id="tab-checklist" class="tab-content">
+
             <div class="section-header">
+
                 <h2><i class="fa-solid fa-list-check"></i> قائمة التجهيزات والنصائح العملية وأرقام الاتصال المباشر</h2>
+
                 <p>دليل تفاعلي تفصيلي لتجهيزات السفر، تصفية الفئات السريعة، تكتيكات القيادة الآمنة صيفاً، وشبكة أرقام
+
                     المساعدة المباشرة.</p>
+
             </div>
+
+
 
             <!-- Category Filter & Action Control Hub -->
+
             <div class="checklist-summary-card margin-bottom-lg">
+
                 <!-- Category Filter Buttons Bar -->
+
                 <div class="chk-filter-section margin-bottom-md">
+
                     <div class="section-mini-title"><i class="fa-solid fa-filter"></i> تصفية القوائم حسب الفئة:</div>
+
                     <div class="chk-filter-bar">
+
                         <button class="chk-filter-btn active" data-chkcat="all"><i class="fa-solid fa-border-all"></i>
+
                             جميع التجهيزات (32)</button>
+
                         <button class="chk-filter-btn" data-chkcat="car"><i class="fa-solid fa-screwdriver-wrench"></i>
+
                             🚗 السيارة والخط (6)</button>
+
                         <button class="chk-filter-btn" data-chkcat="kid"><i class="fa-solid fa-child-reaching"></i> 👧
+
                             الطفلة والراحة (6)</button>
+
                         <button class="chk-filter-btn" data-chkcat="medical"><i class="fa-solid fa-kit-medical"></i> 💊
+
                             الإسعافات والصحة (6)</button>
+
                         <button class="chk-filter-btn" data-chkcat="food"><i class="fa-solid fa-apple-whole"></i> 🥤
+
                             التموين والتبريد (6)</button>
+
                         <button class="chk-filter-btn" data-chkcat="docs"><i class="fa-solid fa-folder-open"></i> 📄
+
                             الوثائق والتطبيقات (8)</button>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- Action Controls Toolbar -->
+
                 <div class="checklist-actions-toolbar">
+
                     <button id="btnCheckAll" class="btn btn-accent-glow">
+
                         <i class="fa-solid fa-check-double"></i> تحديد الكل
+
                     </button>
+
                     <button id="btnUncheckAll" class="btn btn-secondary">
+
                         <i class="fa-solid fa-rotate-left"></i> إلغاء التحديد
+
                     </button>
+
                     <button id="btnPrintChecklist" class="btn btn-outline" onclick="window.print()">
+
                         <i class="fa-solid fa-print"></i> طباعة قائمة التجهيزات الشاملة
+
                     </button>
+
                 </div>
+
             </div>
+
+
 
             <!-- Categorized Interactive Checklists Grid -->
+
             <div class="grid-3 margin-bottom-lg" id="checklistsGrid">
+
                 <!-- Category 1: Vehicle Prep -->
+
                 <div class="card checklist-card" data-category="car">
+
                     <div class="card-header-with-icon">
+
                         <div class="header-right-group">
+
                             <div class="card-header-icon"
                                 style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
+
                             </div>
+
                             <h3>تجهيزات السيارة والصيانة</h3>
+
                         </div>
+
                         <span class="category-progress-pill" id="catProg_car">0 / 6</span>
+
                     </div>
+
                     <ul class="interactive-checklist">
+
                         <li><label><input type="checkbox"> <span>فحص ضغط الإطارات الخمسة على البارد (32-35 PSI) ونظام
+
                                     TPMS.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>فحص سوائل المحرك (الزيت، الفرامل، الرادياتير، وبخاخ
+
                                     المساحات).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>منفاخ هواء كهربائي سلندر مزدوج + مقياس ضغط + رقع
+
                                     الإطارات.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>عاكس طوارئ فسفوري + مثلث السلامة + كابلات اشتراك
+
                                     بطارية.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>مظلات زجاج حرارية جانبية وأمامية عاكسة للحماية من
+
                                     الشمس.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>شاحن سيارة سريع PD + منافذ Type-C/USB + كابلات أصيلة +
+
                                     Power Bank.</span></label></li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Category 2: Kid & Family Comfort -->
+
                 <div class="card checklist-card" data-category="kid">
+
                     <div class="card-header-with-icon">
+
                         <div class="header-right-group">
+
                             <div class="card-header-icon"
                                 style="background: rgba(139, 92, 246, 0.15); color: var(--accent-purple);">
+
                                 <i class="fa-solid fa-child-reaching"></i>
+
                             </div>
+
                             <h3>مستلزمات الطفلة والراحة</h3>
+
                         </div>
+
                         <span class="category-progress-pill" id="catProg_kid">0 / 6</span>
+
                     </div>
+
                     <ul class="interactive-checklist">
+
                         <li><label><input type="checkbox"> <span>تابلت/أيباد بشحن 100% + أفلام وألعاب أوفلاين مُحمّلة
+
                                     مسبقاً.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>سماعات رأس مريحة عازلة للضوضاء لحماية أذن الطفلة أثناء
+
                                     النوم.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>وسادة رقبة Memory Foam + غطاء سفر خفيف للأجواء
+
                                     المكيّفة.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>حقيبة تسلية يدوية (دفتر رسم، كتب ألغاز، كروت مسابقات
+
                                     عائلية).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>سناك مفضل للطفلة (مكسرات، فواكه مقطعة، بسكويت،
+
                                     عصائر).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>بطاقات لعبة البحث عن المعالم الطرقية (Road Trip
+
                                     Scavenger Hunt).</span></label></li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Category 3: First Aid & Medical -->
+
                 <div class="card checklist-card" data-category="medical">
+
                     <div class="card-header-with-icon">
+
                         <div class="header-right-group">
+
                             <div class="card-header-icon"
                                 style="background: rgba(244, 63, 94, 0.15); color: var(--accent-rose);">
+
                                 <i class="fa-solid fa-kit-medical"></i>
+
                             </div>
+
                             <h3>الإسعافات الأولية والحقيبة الطبية</h3>
+
                         </div>
+
                         <span class="category-progress-pill" id="catProg_medical">0 / 6</span>
+
                     </div>
+
                     <ul class="interactive-checklist">
+
                         <li><label><input type="checkbox"> <span>مسكنات ألم وخافض حرارة (بنادول كبار وبنادول أطفال /
+
                                     فيفادول).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>علاج دوار السفر والغثيان (درامامين/موتيليوم) ومضادات
+
                                     المغص.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>قطرات مرطبة ومطهرة لجفاف العين نتيجة التكييف طوال 11
+
                                     ساعة.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>حقيبة إسعافات كاملة (بلاسترات، مسحات معقمة، بتادين،
+
                                     ومقص).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>كريمات واقي الشمس (SPF 50+)، مرطبات جلدية، وتهدئة
+
                                     الحروق.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>أدوية الوصفات الشخصية العائلية بكميات تكفي السفر
+
                                     كاملاً.</span></label></li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Category 4: Food & Refreshments -->
+
                 <div class="card checklist-card" data-category="food">
+
                     <div class="card-header-with-icon">
+
                         <div class="header-right-group">
+
                             <div class="card-header-icon"
                                 style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold);">
+
                                 <i class="fa-solid fa-apple-whole"></i>
+
                             </div>
+
                             <h3>زاد الطريق والتموين والتبريد</h3>
+
                         </div>
+
                         <span class="category-progress-pill" id="catProg_food">0 / 6</span>
+
                     </div>
+
                     <ul class="interactive-checklist">
+
                         <li><label><input type="checkbox"> <span>حافظة تبريد (Cool Box) ممتازة مزودة بقوالب ثلج لـ 16
+
                                     ساعة.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>مياه شرب وافرة (عبوات صغيرة 330مل سهلة الاستخدام
+
                                     بالسيارة).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>تمر حساوي فاخر (خلاص) + مكسرات نية لإبقاء السائق
+
                                     نشيطاً.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>وجبات خفيفة وشطائر سريعة مغلفة مجهزة للانطلاق المبكر (5
+
                                     ص).</span></label></li>
+
                         <li><label><input type="checkbox"> <span>ترمس قهوة عربية حساوية بالهيل + ترمس شاي مجهز
+
                                     للخط.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>مناديل مبللة مطهرة + مناديل جافة + أكياس نفايات
+
                                     مخصصة.</span></label></li>
+
                     </ul>
+
                 </div>
+
+
 
                 <!-- Category 5: Official Docs & Apps -->
+
                 <div class="card checklist-card grid-span-2" data-category="docs">
+
                     <div class="card-header-with-icon">
+
                         <div class="header-right-group">
+
                             <div class="card-header-icon"
                                 style="background: rgba(59, 130, 246, 0.15); color: var(--primary-color);">
+
                                 <i class="fa-solid fa-folder-open"></i>
+
                             </div>
+
                             <h3>الوثائق الرسمية والتطبيقات الذكية والزيارة</h3>
+
                         </div>
+
                         <span class="category-progress-pill" id="catProg_docs">0 / 8</span>
+
                     </div>
+
                     <ul class="interactive-checklist grid-2-checklist">
+
                         <li><label><input type="checkbox"> <span>سريان رخصة القيادة، استمارة المركبة، والتأمين
+
                                     الشامل.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>حجز وتأكيد تصاريح زيارة الروضة الشريفة والعمرة عبر
+
                                     تطبيق نُسك.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>تفعيل تطبيق توكلنا وتأكد من الهوية الرقمية لجميع أفراد
+
                                     الرحلة.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>تحميل خرائط الأوفلاين (Google Maps Offline) لمناطق
+
                                     انقطاع الشبكة.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>تأكيد حجوزات الشقق الفندقية بالمدينة المنورة وبريدة
+
                                     وموعد الدخول.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>تووفير مبلغ نقدي (كاش) للطوارئ والمحطات التي قد تتعطل
+
                                     بها الشبكة.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>فحص رصيد تطبيق مدى / الفيزا والتأكد من تفعيل الدفع
+
                                     اللاتلامسي NFC.</span></label></li>
+
                         <li><label><input type="checkbox"> <span>تفعيل نظام المساعدة على الطريق أو الاشتراك في خدمات نجم
+
                                     وسحب.</span></label></li>
+
                     </ul>
+
                 </div>
+
             </div>
+
+
 
             <!-- Practical Driving & Safety Tips Block -->
+
             <div class="content-block margin-top-lg margin-bottom-lg">
+
                 <h3><i class="fa-solid fa-shield-cat text-warning"></i> النصائح والتكتيكات العملية للقيادة الآمنة على
+
                     الطرق السريعة صيفاً</h3>
+
                 <div class="grid-4">
+
                     <div class="tip-card">
+
                         <div class="tip-icon text-danger"><i class="fa-solid fa-temperature-high"></i></div>
+
                         <h4>تكتيك حرارة الصيف والإطارات</h4>
+
                         <p>افحص ضغط الإطارات صبيحة السفر وهي باردة (32-35 PSI). احذر تعبئة وقود السيارة لأقصى حد في
+
                             الظهيرة لمنع تمدد البنزين بالحرارة.</p>
+
                     </div>
 
+
+
                     <div class="tip-card">
+
                         <div class="tip-icon text-warning"><i class="fa-solid fa-hourglass-half"></i></div>
+
                         <h4>قاعدة الاستراحة الذهبية (2/20)</h4>
+
                         <p>توقف كل ساعتين قيادة صافية لمدة 20 دقيقة بالمحطة لترطيب الجسم وتبريد إطارات المركبة واستعادة
+
                             قمة التركيز الذهني.</p>
+
                     </div>
 
+
+
                     <div class="tip-card">
+
                         <div class="tip-icon text-info"><i class="fa-solid fa-wind"></i></div>
+
                         <h4>بروتوكول العواصف والرياح الترابية</h4>
+
                         <p>في حال هبوب الغبار: خفّض السرعة فوراً إلى 80 كم/س، شغّل الأنوار الواطئة، واحذر استخدام إشارات
+
                             الفلاش الرباعي (Hazard) أثناء الحركة.</p>
+
                     </div>
 
+
+
                     <div class="tip-card">
+
                         <div class="tip-icon text-success"><i class="fa-solid fa-gas-pump"></i></div>
+
                         <h4>إدارة الوقود الاستباقية</h4>
-                        <p>لا تدع الوقود يقل عن المنتصف (1/2) أبداً، خاصة في قطاع القصيم-المدينة السريع (بين عقلة الصقور
-                            والحناكية distance 190 كم).</p>
+
+                        <p>لا تدع الوقود يقل عن المنتصف (1/2) أبداً، وتزود بالوقود من محطة فيول واي (Fuel Way) ومحطة باوررود (Powerroad) على طريق القصيم-المدينة السريع (طريق 60 الدولي).</p>
+
                     </div>
+
                 </div>
+
             </div>
+
+
 
             <!-- Emergency Numbers & Roadside Contacts Box -->
+
             <div class="content-block margin-top-lg">
+
                 <h3><i class="fa-solid fa-phone-volume text-danger"></i> شبكة أرقام الطوارئ والدعم الفني والمساعدة
+
                     المباشرة بالسعودية</h3>
+
                 <div class="grid-3">
+
                     <div class="emergency-box">
+
                         <div class="e-icon"><i class="fa-solid fa-shield-halved"></i></div>
+
                         <div class="e-num">911 / 993</div>
+
                         <div class="e-title">أمن الطرق والطوارئ العامة الموحد</div>
+
                         <div class="e-actions">
+
                             <a href="tel:911" class="btn btn-sm btn-primary call-btn"><i class="fa-solid fa-phone"></i>
+
                                 اتصال</a>
+
                             <button class="btn btn-sm btn-secondary copy-btn" onclick="copyToClipboard('911')"><i
                                     class="fa-solid fa-copy"></i> نسخ الرقم</button>
+
                         </div>
+
                     </div>
 
+
+
                     <div class="emergency-box">
+
                         <div class="e-icon"><i class="fa-solid fa-truck-medical"></i></div>
+
                         <div class="e-num">997</div>
+
                         <div class="e-title">الهلال الأحمر السعودي (الإسعاف)</div>
+
                         <div class="e-actions">
+
                             <a href="tel:997" class="btn btn-sm btn-primary call-btn"><i class="fa-solid fa-phone"></i>
+
                                 اتصال</a>
+
                             <button class="btn btn-sm btn-secondary copy-btn" onclick="copyToClipboard('997')"><i
                                     class="fa-solid fa-copy"></i> نسخ الرقم</button>
+
                         </div>
+
                     </div>
 
+
+
                     <div class="emergency-box">
+
                         <div class="e-icon"><i class="fa-solid fa-car-burst"></i></div>
+
                         <div class="e-num">993</div>
+
                         <div class="e-title">المرور السعودي (الحوادث)</div>
+
                         <div class="e-actions">
+
                             <a href="tel:993" class="btn btn-sm btn-primary call-btn"><i class="fa-solid fa-phone"></i>
+
                                 اتصال</a>
+
                             <button class="btn btn-sm btn-secondary copy-btn" onclick="copyToClipboard('993')"><i
                                     class="fa-solid fa-copy"></i> نسخ الرقم</button>
+
                         </div>
+
                     </div>
 
+
+
                     <div class="emergency-box">
+
                         <div class="e-icon"><i class="fa-solid fa-wrench"></i></div>
+
                         <div class="e-num">933</div>
+
                         <div class="e-title">طوارئ وزارة النقل (صيانة الطرق)</div>
+
                         <div class="e-actions">
+
                             <a href="tel:933" class="btn btn-sm btn-primary call-btn"><i class="fa-solid fa-phone"></i>
+
                                 اتصال</a>
+
                             <button class="btn btn-sm btn-secondary copy-btn" onclick="copyToClipboard('933')"><i
                                     class="fa-solid fa-copy"></i> نسخ الرقم</button>
+
                         </div>
+
                     </div>
 
+
+
                     <div class="emergency-box">
+
                         <div class="e-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+
                         <div class="e-num">920000356</div>
+
                         <div class="e-title">المساعدة على الطريق والقطر (نجم/سحب)</div>
+
                         <div class="e-actions">
+
                             <a href="tel:920000356" class="btn btn-sm btn-primary call-btn"><i
                                     class="fa-solid fa-phone"></i> اتصال</a>
+
                             <button class="btn btn-sm btn-secondary copy-btn" onclick="copyToClipboard('920000356')"><i
                                     class="fa-solid fa-copy"></i> نسخ الرقم</button>
+
                         </div>
+
                     </div>
+
+
 
                     <div class="emergency-box">
+
                         <div class="e-icon"><i class="fa-solid fa-user-doctor"></i></div>
+
                         <div class="e-num">937</div>
+
                         <div class="e-title">مركز الاستشارات الطبية للصحة (24/7)</div>
+
                         <div class="e-actions">
+
                             <a href="tel:937" class="btn btn-sm btn-primary call-btn"><i class="fa-solid fa-phone"></i>
+
                                 اتصال</a>
+
                             <button class="btn btn-sm btn-secondary copy-btn" onclick="copyToClipboard('937')"><i
                                     class="fa-solid fa-copy"></i> نسخ الرقم</button>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
+
+
     <!-- Footer -->
+
     <footer class="app-footer">
+
         <div class="container footer-container">
+
             <p>تم إعداد هذا الدليل التفاعلي بكل حب وعناية لرحلتكم العائلية المباركة 💚</p>
+
             <p>رافقتكم السلامة والقبول في حلكم وترحالكم.</p>
+
         </div>
+
     </footer>
 
+
+
     <script src="script.js"></script>
+
 </body>
+
+
 
 </html>

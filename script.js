@@ -303,37 +303,26 @@ const WAYPOINTS = [
         desc: '📍 <strong>نقطة الانطلاق:</strong> حي وسط المبرّز التاريخي بالأحساء. فحص ضغط الإطارات والانطلاق فجراً 05:00 ص. <br>⚡ <strong>السرعة المسموحة:</strong> 120 كم/س'
     },
     {
-        id: 'rabeen',
-        name: 'محطة ربين (FYYA3550)',
-        lat: 25.1842,
-        lng: 48.4165,
-        dist: 129,
-        time: '06:15 ص',
-        speed: '120 كم/س',
-        type: 'station',
-        desc: '⛽ <strong>محطة ربين (129 كم):</strong> التزود بالوقود والقهوة قبل مواصلة طريق الهفوف - الرياض. <br>⚡ <strong>السرعة المسموحة:</strong> 120 كم/س'
-    },
-    {
         id: 'go_station',
         name: 'محطة قو ستيشن (سعّد)',
         lat: 25.1351,
         lng: 47.5337,
         dist: 210,
-        time: '07:15 ص',
+        time: '06:50 ص',
         speed: '120 كم/س',
         type: 'station',
-        desc: '⛽ <strong>محطة قو ستيشن - سعّد (210 كم):</strong> توقف سريع للتزود بالوقود وتفادي زحمة الرياض. <br>⚡ <strong>السرعة المسموحة:</strong> 120 كم/س'
+        desc: '⛽ <strong>أول توقف - محطة قو ستيشن سعّد (210 كم):</strong> التزود بالوقود والقهوة وتفادي زحمة الرياض. <br>⚡ <strong>السرعة المسموحة:</strong> 120 كم/س'
     },
     {
         id: 'petroly',
-        name: 'محطة بترولي (حي العارض - الرياض)',
-        lat: 24.9223917,
-        lng: 46.5662,
+        name: 'محطة بترولي الجديدة (حي العارض - الرياض)',
+        lat: 24.9412,
+        lng: 46.5566,
         dist: 343,
         time: '08:40 ص',
         speed: '120 كم/س',
         type: 'station',
-        desc: '⛽ <strong>محطة بترولي - حي العارض (343 كم):</strong> محطة حديثة متكاملة تقع شمال الرياض على طريق الملك فهد العارض قبل الخروج إلى طريق القصيم السريع الممتد نحو المجمعة. <br>⚡ <strong>السرعة المسموحة:</strong> 120 كم/س'
+        desc: '⛽ <strong>محطة بترولي الجديدة - حي العارض (343 كم):</strong> محطة حديثة متكاملة تقع شمال الرياض على طريق الملك فهد (حي العارض) قبل الخروج إلى طريق القصيم السريع الممتد نحو المجمعة. <br>⚡ <strong>السرعة المسموحة:</strong> 120 كم/س'
     },
     {
         id: 'aldrees_majmaah',
@@ -344,53 +333,42 @@ const WAYPOINTS = [
         time: '10:30 ص',
         speed: '140 كم/س',
         type: 'station',
-        desc: '⛽ <strong>محطة الدريس - المجمعة (504 كم):</strong> استراحة كبرى ونظيفة على طريق الرياض/القصيم السريع، تتيح التزود بالوقود والتموينات والراحة قبل الاستمرار لبريدة. <br>⚡ <strong>السرعة المسموحة:</strong> 140 كم/س (طريق القصيم السريع)'
+        desc: '⛽ <strong>محطة الدريس - المجمعة (504 كم):</strong> استراحة كبرى ونظيفة على طريق الرياض/القصيم السريع، تتيح التزود بالوقود والتموينات والراحة قبل الاستمرار لمحطة Fuel Way. <br>⚡ <strong>السرعة المسموحة:</strong> 140 كم/س (طريق القصيم السريع)'
     },
 
     {
-        id: 'buraidah',
-        name: 'مدينة بريدة (استراحة بريدة)',
-        lat: 26.3500,
-        lng: 43.9800,
-        dist: 640,
-        time: '12:00 ظ',
-        speed: '110 كم/س',
-        type: 'buraidah',
-        desc: '🌴 <strong>توقف بريدة (640 كم):</strong> غداء عائلي فاخر (مطعم الرومانسية / مطعم الناضج)، قهوة مختصة، وملاهي للطفلة. <br>⚡ <strong>السرعة المسموحة:</strong> 100 - 120 كم/س (النطاق العمراني)'
+        id: 'fuel_way',
+        name: 'محطة فيول واي (Fuel Way) - طريق الرياض / القصيم',
+        lat: 26.1834,
+        lng: 43.8496,
+        dist: 670,
+        time: '12:30 ظ',
+        speed: '140 كم/س',
+        type: 'station',
+        desc: '⛽ <strong>محطة فيول واي (Fuel Way) (670 كم):</strong> استراحة كبرى ونموذجية على طريق الرياض-القصيم السريع، تتيح التزود بالوقود وأداء الصلاة وتناول وجبة الغداء والراحة، وتتميز بوجود <strong>محل ديوانية شاي يقدم شاي تلقيمة بالنعناع سكر وسط ممتاز ومضبوط جدّاً ☕🍃</strong>. <br>⚡ <strong>السرعة المسموحة:</strong> 140 كم/س'
     },
 
     {
-        id: 'oqla',
-        name: 'محطة ساسكو (عقلة الصقور)',
-        lat: 25.8300,
-        lng: 42.1900,
-        dist: 850,
-        time: '06:00 م',
+        id: 'powerroad',
+        name: 'محطة باوررود (Powerroad) - طريق القصيم / المدينة',
+        lat: 25.3273,
+        lng: 41.5149,
+        dist: 930,
+        time: '04:45 م',
         speed: '140 كم/س',
         type: 'station',
-        desc: '🕌 <strong>عقلة الصقور (850 كم):</strong> استراحة منتصف طريق القصيم-المدينة السريع وصلاة المغرب والعشاء. <br>⚡ <strong>السرعة المسموحة:</strong> 140 كم/س (طريق 60 الدولي)'
+        desc: '⛽ <strong>محطة باوررود Powerroad (930 كم):</strong> محطة حديثة ونموذجية على طريق 60 الدولي (القصيم-المدينة)، خدمات وقود ممتاز، تموينات متكاملة، كافيهات، ومصلى ودورات مياه مريحة لأداء صلاة المغرب والعشاء وتجديد الطاقة قبل الوصول للمدينة المنورة. <br>⚡ <strong>السرعة المسموحة:</strong> 140 كم/س'
     },
     {
-        id: 'hanakiyah',
-        name: 'محطة العاليات النموذجية (الحناكية)',
-        lat: 24.8700,
-        lng: 40.5100,
-        dist: 1040,
-        time: '08:15 م',
-        speed: '140 كم/س',
-        type: 'station',
-        desc: '✅ <strong>محطة العاليات بالحناكية (1,040 كم):</strong> آخر محطة كبرى، مطعم حضرموت نايتس ونسترو كافيه. <br>⚡ <strong>السرعة المسموحة:</strong> 140 كم/س'
-    },
-    {
-        id: 'medina',
-        name: 'المسجد النبوي الشريف (المدينة المنورة)',
-        lat: 24.4672,
-        lng: 39.6112,
+        id: 'sayyid_shuhada',
+        name: 'جامع سيّد الشهداء حمزة (المدينة المنورة)',
+        lat: 24.4927,
+        lng: 39.6126,
         dist: 1150,
         time: '09:30 م',
-        speed: '100 كم/س',
+        speed: '80 - 100 كم/س',
         type: 'end',
-        desc: '🕌 <strong>نقطة الوصول:</strong> المسجد النبوي الشريف بالمدينة المنورة. الحمد لله على السلامة! <br>⚡ <strong>السرعة المسموحة:</strong> 100 كم/س (الدائري الثاني)'
+        desc: '🕌 <strong>نقطة الوصول النهائية:</strong> جامع سيّد الشهداء حمزة بن عبد المطلب رضي الله عنه وسفح جبل أُحد بالمدينة المنورة. الحمد لله على سلامة الوصول! <br>⚡ <strong>السرعة المسموحة:</strong> 80 - 100 كم/س (داخل المدينة)'
     }
 ];
 
@@ -604,8 +582,8 @@ function initInteractiveMap() {
             if (wp.type === 'start') {
                 iconClass = 'fa-solid fa-flag-checkered';
                 color = '#10b981';
-            } else if (wp.type === 'buraidah') {
-                iconClass = 'fa-solid fa-tree';
+            } else if (wp.id === 'fuel_way') {
+                iconClass = 'fa-solid fa-gas-pump';
                 color = '#f59e0b';
             } else if (wp.type === 'end') {
                 iconClass = 'fa-solid fa-kaaba';
@@ -814,30 +792,19 @@ const TIMELINE_STEPS = [
         isRestSelectable: false
     },
     {
-        id: 'rabeen',
-        name: 'محطة ربين (FYYA3550)',
-        dist: 129,
-        driveMins: 75, // 1h 15m
-        defaultRestMins: 5,
-        type: 'station',
-        services: 'وقود، قهوة، تموينات، مصلى',
-        notes: 'استراحة قهوة الصباح وتمديد الأرجل.',
-        isRestSelectable: true
-    },
-    {
         id: 'go_station',
         name: 'محطة قو ستيشن (سعّد)',
         dist: 210,
-        driveMins: 45, // 45m
-        defaultRestMins: 5,
+        driveMins: 110, // ~1h 50m from Al-Ahsa (210 km at 120 km/h)
+        defaultRestMins: 10,
         type: 'station',
-        services: 'وقود، تموينات، دورات مياه',
-        notes: 'توقف للتزود بالوقود وتفادي زحمة الرياض.',
+        services: 'وقود، تموينات، دورات مياه، قهوة',
+        notes: 'أول محطة وتوقف رئيسي للتزود بالوقود والقهوة وتفادي زحمة الرياض.',
         isRestSelectable: true
     },
     {
         id: 'petroly',
-        name: 'محطة بترولي (حي العارض - الرياض)',
+        name: 'محطة بترولي الجديدة (حي العارض - الرياض)',
         dist: 343,
         driveMins: 70, // 1h 10m from Go Station
         defaultRestMins: 15,
@@ -851,84 +818,57 @@ const TIMELINE_STEPS = [
         name: 'محطة الدريس (المجمعة)',
         dist: 504,
         driveMins: 75, // 1h 15m from Petroly Al Arid (343 -> 504 = 161 km)
-        defaultRestMins: 25,
+        defaultRestMins: 20,
         type: 'station',
         services: 'وقود، تموينات الدريس، كافيهات، مصلى، دورات مياه',
-        notes: 'استراحة رئيسية وتزود بالوقود وتفريغ طاقة الطفلة قبل الدخول لبريدة.',
+        notes: 'استراحة وتزود بالوقود وتفريغ طاقة الطفلة قبل مواصلة السير لمحطة Fuel Way.',
         isRestSelectable: true
     },
     {
-        id: 'buraidah_entry',
-        name: 'مدخل بريدة الجنوبي',
-        dist: 640,
-        driveMins: 60, // 1 hour from Aldrees Majmaah (504 -> 640 = 136 km)
-        defaultRestMins: 0,
-        type: 'transit',
-        services: 'محطة ساسكو بريدة',
-        notes: 'الدخول لمدينة بريدة لبدء برنامج الاستراحة.',
-        isRestSelectable: false
-    },
-    {
-        id: 'buraidah',
-        name: 'برنامج بريدة العائلي (استراحة بريدة)',
-        dist: 640,
-        driveMins: 0,
-        defaultRestMins: 240, // 4 hours
-        type: 'buraidah',
-        services: 'غداء الرومانسية/الناضج، كافيه، ألعاب، كليجا',
-        notes: 'صلاة الظهر والعصر + غداء عائلي + ترفيه الطفلة + شراء كليجا القصيم.',
+        id: 'fuel_way',
+        name: 'محطة فيول واي (Fuel Way) - طريق الرياض / القصيم',
+        dist: 670,
+        driveMins: 75, // ~1h 15m from Majmaah (504 -> 670 = 166 km at 140 km/h)
+        defaultRestMins: 45,
+        type: 'station',
+        services: 'وقود ممتاز، مطاعم ومقاهٍ، ديوانية شاي تلقيمة بالنعناع، مصلى واسع، تموينات، دورات مياه',
+        notes: 'استراحة الغداء وصلاة الظهر والعصر جمعاً وقصراً، وشاي تلقيمة بالنعناع سكر وسط ممتاز لتعديل المزاج وتمديد الأرجل.',
         isRestSelectable: true,
         restOptions: [
-            { val: 60, text: '1 ساعة' },
-            { val: 120, text: '2 ساعتين' },
-            { val: 180, text: '3 ساعات' },
-            { val: 240, text: '4 ساعات (افتراضي)' },
-            { val: 300, text: '5 ساعات' },
-            { val: 360, text: '6 ساعات' }
+            { val: 20, text: '20 دقيقة (توقف سريع)' },
+            { val: 30, text: '30 دقيقة' },
+            { val: 45, text: '45 دقيقة (افتراضي)' },
+            { val: 60, text: '1 ساعة (غداء وصلاة)' },
+            { val: 90, text: 'ساعة ونصف' }
         ]
     },
     {
-        id: 'buraidah_depart',
-        name: 'الانطلاق من بريدة نحو المدينة',
-        dist: 640,
-        driveMins: 0,
-        defaultRestMins: 0,
-        type: 'depart',
-        services: 'تعبئة بنزين كاملة',
-        notes: 'الانطلاق في الجزء الأخير من السفر (طريق القصيم/المدينة).',
-        isRestSelectable: false
-    },
-    {
-        id: 'oqla',
-        name: 'محطة ساسكو (عقلة الصقور)',
-        dist: 850,
-        driveMins: 120, // 2h 00m
-        defaultRestMins: 25,
+        id: 'powerroad',
+        name: 'محطة باوررود (Powerroad) - طريق القصيم / المدينة',
+        dist: 930,
+        driveMins: 110, // ~1h 50m from Fuel Way (670 -> 930 = 260 km at 140 km/h)
+        defaultRestMins: 20,
         type: 'station',
-        services: 'وقود، مصلى كبير، تموينات',
-        notes: 'استراحة + صلاة المغرب والعشاء جمعاً وقصراً.',
-        isRestSelectable: true
+        services: 'وقود ممتاز، تموينات متكاملة، مقاهٍ وكافيهات، مصلى، دورات مياه',
+        notes: 'استراحة وتزود بالوقود والقهوة وصلاة المغرب والعشاء جمعاً وقصراً.',
+        isRestSelectable: true,
+        restOptions: [
+            { val: 10, text: '10 دقائق (سريع)' },
+            { val: 15, text: '15 دقيقة' },
+            { val: 20, text: '20 دقيقة (افتراضي)' },
+            { val: 30, text: '30 دقيقة (صلاة وراحة)' },
+            { val: 45, text: '45 دقيقة' }
+        ]
     },
     {
-        id: 'hanakiyah',
-        name: 'محطة العاليات (الحناكية)',
-        dist: 1040,
-        driveMins: 105, // 1h 45m
-        defaultRestMins: 15,
-        type: 'station',
-        services: 'وقود، بارنز كافيه',
-        notes: 'توقف سريع لمشروبات منعشة وقرب الوصول.',
-        isRestSelectable: true
-    },
-    {
-        id: 'medina',
-        name: 'وصول المدينة المنورة (المسجد النبوي)',
+        id: 'sayyid_shuhada',
+        name: 'الوصول إلى مسجد "سيّد الشهداء حمزة"',
         dist: 1150,
-        driveMins: 75, // 1h 15m
+        driveMins: 100, // ~1h 40m from Powerroad (930 -> 1150 = 220 km)
         defaultRestMins: 0,
         type: 'end',
-        services: 'الفندق والراحة',
-        notes: 'الوصول بحفظ الله وتفريغ الأمتعة والاسترخاء.',
+        services: 'الوصول، الصلاة، والراحة',
+        notes: 'الوصول بحفظ الله إلى جامع سيّد الشهداء وسفح جبل أحد بالمدينة المنورة، تفريغ الأمتعة والاسترخاء.',
         isRestSelectable: false
     }
 ];
@@ -957,17 +897,7 @@ function formatMinutesTo12h(totalMins, detailed = false) {
     return `${hStr}:${mStr} ${period}`;
 }
 
-// Check if presence in Buraidah (arrival to departure) overlaps with 1:00 PM (780 mins) - 4:00 PM (960 mins)
-function isPresentInBuraidahLunchWindow(arrivalMins, restMins) {
-    const departureMins = arrivalMins + restMins;
-    for (let m = arrivalMins; m <= departureMins; m += 15) {
-        const timeOfDay = (m % 1440 + 1440) % 1440;
-        if (timeOfDay >= 780 && timeOfDay <= 960) {
-            return true;
-        }
-    }
-    return false;
-}
+
 
 let timelineStartTimeMins = 300; // 05:00 AM default
 const today = new Date();
@@ -977,7 +907,7 @@ const dd = String(today.getDate()).padStart(2, '0');
 const defaultDateStr = `${yyyy}-${mm}-${dd}`;
 let timelineStartDateStr = defaultDateStr;
 
-let stationRestDurations = {}; // { rabeen: 15, go_station: 15, ... }
+let stationRestDurations = {}; // { go_station: 15, petroly: 15, ... }
 
 function getStepDateTime(departureDateStr, totalMinutesFromStartOfDay) {
     const [year, month, day] = departureDateStr.split('-').map(Number);
@@ -1149,7 +1079,6 @@ function recalculateTimeline() {
         currentMins = departureMins;
 
         const arrivalDateObj = getStepDateTime(timelineStartDateStr, arrivalMins);
-        const departureDateObj = getStepDateTime(timelineStartDateStr, departureMins);
         const relDateLabel = getRelativeDateLabel(timelineStartDateStr, arrivalDateObj);
 
         // Sync with WAYPOINTS array if matching ID
@@ -1167,13 +1096,6 @@ function recalculateTimeline() {
         let timeDisplayStr = '';
         if (step.type === 'start') {
             timeDisplayStr = `<strong class="text-accent">${formatMinutesTo12h(arrivalMins, true)}</strong>${dateSubHtml}`;
-        } else if (step.type === 'buraidah') {
-            const depDateLabel = getRelativeDateLabel(timelineStartDateStr, departureDateObj);
-            let buraidahDateLabel = dateSubHtml;
-            if (depDateLabel !== relDateLabel) {
-                buraidahDateLabel = `<span style="display:block; font-size:0.75rem; font-weight:normal; opacity:0.85; margin-top:2px;">${relDateLabel.trim()} - ${depDateLabel.trim()}</span>`;
-            }
-            timeDisplayStr = `<strong>${formatMinutesTo12h(arrivalMins)} - ${formatMinutesTo12h(departureMins)}</strong>${buraidahDateLabel}`;
         } else if (step.type === 'depart') {
             timeDisplayStr = `<strong class="text-accent">${formatMinutesTo12h(arrivalMins)}</strong>${dateSubHtml}`;
         } else if (step.type === 'end') {
@@ -1187,9 +1109,6 @@ function recalculateTimeline() {
         if (step.driveMins > 0) {
             const h = (step.driveMins / 60).toFixed(1);
             driveDisplayStr = `${h} ساعة (${step.driveMins} د)`;
-        } else if (step.type === 'buraidah') {
-            const restHours = (restMins / 60).toFixed(0);
-            driveDisplayStr = `<span class="badge badge-warning">توقف ${restHours}س</span>`;
         }
 
         // Format Rest Select Cell
@@ -1220,25 +1139,12 @@ function recalculateTimeline() {
             `;
         }
 
-        // Evaluate Dynamic Services & Notes for Buraidah Stop
         let displayServices = step.services;
         let displayNotes = step.notes;
 
-        if (step.id === 'buraidah') {
-            const isLunchWindow = isPresentInBuraidahLunchWindow(arrivalMins, restMins);
-            if (isLunchWindow) {
-                displayServices = `<span class="badge badge-success" style="margin-bottom:4px; display:inline-flex; align-items:center; gap:4px;"><i class="fa-solid fa-utensils"></i> صلاة الظهر والعصر + غداء عائلي</span><br>غداء الرومانسية/الناضج، كافيه، ألعاب، كليجا`;
-                displayNotes = `🕌 <strong>صلاة الظهر والعصر + 🍽️ غداء عائلي</strong> (مطعم الرومانسية أو الناضج بريدة) + 🎡 ترفيه الطفلة + 🍪 شراء كليجا القصيم.`;
-            } else {
-                displayServices = `استراحة عائلية، كافيهات، ترفيه، كليجا القصيم`;
-                displayNotes = `☕ <strong>استراحة عائلية وتجديد النشاط</strong> + 🎡 ترفيه الطفلة + 🍪 شراء كليجا القصيم والتزود بالوقود.`;
-            }
-        }
-
         // Row CSS Classes
         let rowClass = '';
-        if (step.type === 'start' || step.type === 'depart' || step.id === 'nakhla_sasco') rowClass = 'highlight-row';
-        else if (step.type === 'buraidah') rowClass = 'buraidah-row';
+        if (step.type === 'start' || step.type === 'depart' || step.id === 'fuel_way' || step.id === 'powerroad') rowClass = 'highlight-row';
         else if (step.type === 'end') rowClass = 'highlight-row arrival-row';
 
         const tr = document.createElement('tr');

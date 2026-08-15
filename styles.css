@@ -2403,7 +2403,7 @@ body.theme-dark input[type="date"]::-webkit-calendar-picker-indicator:hover {
     /* Page Breaks Logic */
     #tab-summary { page-break-after: always !important; }
     #tab-stations { page-break-after: always !important; }
-    #tab-buraidah { page-break-after: always !important; }
+    #tab-fuelway { page-break-after: always !important; }
     #tab-medina { page-break-after: always !important; }
     #tab-timeline { page-break-after: always !important; }
 
